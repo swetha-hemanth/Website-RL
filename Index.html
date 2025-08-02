@@ -1,10 +1,13 @@
-      <!DOCTYPE html>
+                    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raja Lodge - Ooty</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -12,26 +15,9 @@
       box-sizing: border-box;
     }
 
-    body, html {
-      height: 100%;
-      font-family: 'Open Sans', sans-serif;
-      scroll-behavior: smooth;
+    body {
+      font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
-    }
-
-    header {
-      position: relative;
-      height: 100vh;
-      color: #fff;
-    }
-
-    video.bg-video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
     }
 
     nav {
@@ -39,135 +25,122 @@
       justify-content: space-between;
       align-items: center;
       background: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
+      padding: 1rem 2rem;
       position: sticky;
       top: 0;
-      z-index: 99;
+      z-index: 1000;
     }
 
-    nav .nav-left {
+    .nav-left {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
       font-weight: bold;
-      font-size: 14px;
-      color: gold;
-      text-align: left;
-      line-height: 1.2;
+      color: #FFD700;
     }
 
-    nav .nav-left span {
-      display: block;
-      font-size: 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
-
-    nav ul li a {
+    .nav-right a {
       text-decoration: none;
       color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
+      margin-left: 15px;
+      font-size: 0.95rem;
     }
 
-    nav ul li a:hover {
-      color: gold;
+    .nav-right a:hover {
+      color: #FFD700;
     }
 
-    .logo {
-      display: block;
-      margin: 10px auto 0;
-      max-width: 150px;
-      border-radius: 10px;
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
     }
 
-    .hero-content {
+    .logo-container img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .video-section {
       position: relative;
-      top: 30%;
-      text-align: center;
-      color: white;
-      padding: 20px;
+      z-index: 1;
     }
 
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 15px;
+    .video-section video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
-    .hero-buttons {
-      margin-top: 25px;
-    }
-
-    .hero-buttons a {
-      text-decoration: none;
-      margin: 0 10px;
-      padding: 10px 20px;
-      background: gold;
-      color: black;
+    .welcome-text {
+      position: absolute;
+      top: 120px;
+      left: 20px;
+      color: #FFD700;
+      font-size: 1.5rem;
+      z-index: 2;
       font-weight: bold;
-      border-radius: 25px;
-      transition: 0.3s;
-    }
-
-    .hero-buttons a:hover {
-      background: #fff;
-      color: #000;
+      text-shadow: 1px 1px 5px black;
     }
 
     @media (max-width: 768px) {
-      nav ul {
+      nav {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
       }
 
-      .hero-content h1 {
-        font-size: 2rem;
+      .nav-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
       }
 
-      .hero-buttons a {
-        display: block;
-        margin: 10px auto;
+      .nav-right a {
+        margin: 5px 0;
+      }
+
+      .welcome-text {
+        font-size: 1.2rem;
+        top: 100px;
+      }
+
+      .logo-container img {
+        width: 100px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <video class="bg-video" autoplay muted loop>
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-left">🌄 Welcome to<br>RAJA LODGE</div>
+    <div class="nav-right">
+      <a href="index.html">home🏠</a>
+      <a href="about.html">About🏡</a>
+      <a href="gallery.html">Gallery🖼️</a>
+      <a href="pricing.html">Pricing💰</a>
+      <a href="booking.html">Booking📖</a>
+      <a href="reviews.html">Reviews⭐</a>
+      <a href="guidelines.html">Guidelines📌</a>
+      <a href="contact.html">Contact📱</a>
+    </div>
+  </nav>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" />
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section">
+    <video autoplay muted loop>
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-
-    <nav>
-      <div class="nav-left">
-        🌄 Welcome to<br><span>RAJA LODGE</span>
-      </div>
-      <ul>
-        <li><a href="#home">home🏠</a></li>
-        <li><a href="about.html">About🏨</a></li>
-        <li><a href="gallery.html">Gallery🖼️</a></li>
-        <li><a href="pricing.html">Pricing💰</a></li>
-        <li><a href="booking.html">Booking📖</a></li>
-        <li><a href="review.html">Reviews⭐</a></li>
-        <li><a href="guidelines.html">Guidelines📌</a></li>
-        <li><a href="contact.html">Contact📱</a></li>
-      </ul>
-    </nav>
-
-    <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="logo" />
-
-    <div class="hero-content" id="home">
-      <h1>Raja Lodge, Ooty</h1>
-      <div class="hero-buttons">
-        <a href="tel:9843830181">📞 Call Now</a>
-        <a href="https://wa.me/919843830181" target="_blank">💬 WhatsApp</a>
-      </div>
-    </div>
-  </header>
+  </div>
 
 </body>
 </html>
