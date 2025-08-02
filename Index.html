@@ -1,185 +1,80 @@
-<!DOCTYPE html>
+
+            <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
+    html {
       scroll-behavior: smooth;
-      font-family: 'Playfair Display', serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    header {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    header video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-      padding: 10px;
-      z-index: 99;
-    }
-
-    nav .line1 {
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    nav .line2 a {
-      margin: 0 12px;
-      color: #ffd700;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    nav .line2 a:hover {
-      text-decoration: underline;
-    }
-
-    .content {
-      position: relative;
-      top: 30%;
-      text-align: center;
-    }
-
-    .logo {
-      width: 100px;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .tagline {
-      font-size: 20px;
-      font-style: italic;
-      color: #ccc;
-    }
-
-    .buttons {
-      margin-top: 20px;
-    }
-
-    .buttons a {
-      padding: 10px 20px;
-      margin: 0 10px;
-      background-color: gold;
-      color: #000;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-      .tagline {
-        font-size: 16px;
-      }
-      nav .line2 a {
-        display: block;
-        margin: 8px 0;
-      }
     }
   </style>
 </head>
+<body class="bg-black text-white font-sans">
 
-<body>
+  <!-- Fixed Top Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 px-4 py-3 bg-black bg-opacity-60 backdrop-blur-sm shadow-md">
+    <ul class="grid grid-cols-4 sm:grid-cols-8 text-xs sm:text-sm font-semibold text-white gap-y-2 gap-x-4 justify-items-center">
+      <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+      <li><a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a></li>
+      <li><a href="#pricing" class="hover:text-yellow-400 transition">Pricing</a></li>
+      <li><a href="#booking" class="hover:text-yellow-400 transition">Booking</a></li>
+      <li><a href="#reviews" class="hover:text-yellow-400 transition">Reviews</a></li>
+      <li><a href="#guidelines" class="hover:text-yellow-400 transition">Guidelines</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400 transition">Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <header id="home">
-    <video autoplay muted loop>
+  <!-- Hero Section -->
+  <section id="home" class="relative w-full h-screen overflow-hidden">
+    <video autoplay muted loop class="absolute w-full h-full object-cover">
       <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
     </video>
 
-    <nav>
-      <div class="line1">🏨 Raja Lodge Ooty</div>
-      <div class="line2">
-        <a href="#home">🏠 Home</a>
-        <a href="#about">📖 About</a>
-        <a href="#gallery">🖼️ Gallery</a>
-        <a href="#pricing">💸 Pricing</a>
-        <a href="#booking">📝 Booking</a>
-        <a href="#contact">📞 Contact</a>
-      </div>
-    </nav>
-
-    <div class="content">
-      <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="logo" />
-      <h1>Welcome to Raja Lodge Ooty</h1>
-      <p class="tagline">🏞️ Your home away from home in the Queen of Hills</p>
-      <div class="buttons">
-        <a href="tel:09843830181">📞 Call Now</a>
-        <a href="https://wa.me/919843830181">💬 WhatsApp</a>
+    <!-- Overlay Content -->
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-4 text-center pt-24">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-24 h-24 sm:w-28 sm:h-28 mb-4 rounded-full border-4 border-white shadow-xl" />
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-yellow-400 tracking-wide mb-2">RAJA LODGE OOTY</h1>
+      <p class="text-lg sm:text-xl font-serif text-gray-200 mb-6">
+        Your Home Away from Home in the Queen of Hills
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:9843830181" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-full font-semibold transition">Call Now</a>
+        <a href="https://wa.me/9843830181" class="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-full font-semibold transition">WhatsApp</a>
       </div>
     </div>
-  </header>
-
-  <!-- Add more sections below -->
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>✨ Trusted by travelers for 20+ years. Premium rooms, affordable pricing & friendly service await you at Raja Lodge Ooty.</p>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <p>🖼️ Beautiful moments and scenic views from our lodge will be displayed here.</p>
+  <!-- Dummy Section Structure (to be filled later) -->
+  <section id="about" class="min-h-screen flex items-center justify-center bg-gray-900">
+    <h2 class="text-4xl font-bold">About Us</h2>
   </section>
 
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <p>💰 Affordable rates with premium comfort. Family rooms, deluxe, and dorms available.</p>
+  <section id="gallery" class="min-h-screen flex items-center justify-center bg-gray-800">
+    <h2 class="text-4xl font-bold">Gallery</h2>
   </section>
 
-  <section id="booking">
-    <h2>Booking</h2>
-    <p>📝 Online Booking Coming Soon! Call or WhatsApp to reserve your stay.</p>
+  <section id="pricing" class="min-h-screen flex items-center justify-center bg-gray-900">
+    <h2 class="text-4xl font-bold">Pricing</h2>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📧 Manju9041mp@gmail.com | 📞 +91 93849 89077</p>
+  <section id="booking" class="min-h-screen flex items-center justify-center bg-gray-800">
+    <h2 class="text-4xl font-bold">Booking</h2>
+  </section>
+
+  <section id="reviews" class="min-h-screen flex items-center justify-center bg-gray-900">
+    <h2 class="text-4xl font-bold">Reviews</h2>
+  </section>
+
+  <section id="guidelines" class="min-h-screen flex items-center justify-center bg-gray-800">
+    <h2 class="text-4xl font-bold">Guidelines</h2>
+  </section>
+
+  <section id="contact" class="min-h-screen flex items-center justify-center bg-gray-900">
+    <h2 class="text-4xl font-bold">Contact Us</h2>
   </section>
 
 </body>
