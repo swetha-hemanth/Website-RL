@@ -2,147 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0e0e0e;
-      color: #f5f5f5;
+      background-color: #0d0d0d;
+      color: #f9f9f9;
     }
 
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
+      justify-content: space-between;
+      align-items: center;
       z-index: 1000;
     }
 
-    nav a {
-      color: #ffd700;
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: gold;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
-      transition: 0.3s ease;
     }
 
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    .hero {
+    .hero-section {
       position: relative;
-      height: 80vh;
+      width: 100%;
+      height: 100vh;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
     }
 
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .hero-section video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1;
-      filter: brightness(0.4);
+      opacity: 0.7;
     }
 
-    .hero .logo {
-      width: 130px;
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-content img {
+      width: 120px;
       height: auto;
       margin-bottom: 20px;
     }
 
-    .hero h1 {
+    .hero-content h1 {
       font-family: 'Playfair Display', serif;
       font-size: 40px;
-      color: #ffd700;
       margin-bottom: 10px;
+      color: gold;
     }
 
-    .hero p {
+    .hero-content p {
       font-size: 18px;
-      color: #f1f1f1;
-      max-width: 90%;
+      margin-bottom: 25px;
+    }
+
+    .hero-content .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content .buttons a {
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .btn-call {
+      background-color: #facc15;
+      color: #000;
+    }
+
+    .btn-whatsapp {
+      background-color: #22c55e;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 80px 20px;
       text-align: center;
     }
 
-    section h2 {
-      font-size: 30px;
-      color: #ffd700;
-      margin-bottom: 20px;
-    }
-
-    section p {
-      font-size: 18px;
-      color: #ccc;
-    }
-
-    @media screen and (max-width: 768px) {
-      .hero h1 {
+    @media (max-width: 768px) {
+      .hero-content h1 {
         font-size: 30px;
       }
 
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
+      .hero-content p {
+        font-size: 16px;
+      }
+
+      nav ul li a {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#booking">Booking</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#guidelines">Guidelines</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">
+      <img src="IMG-20250731-WA0005.jpg" alt="Logo" style="height: 40px; border-radius: 10px;">
+    </div>
+    <ul>
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#about">🏨 About</a></li>
+      <li><a href="#gallery">🖼️ Gallery</a></li>
+      <li><a href="#pricing">💰 Pricing</a></li>
+      <li><a href="#booking">📝 Booking</a></li>
+      <li><a href="#reviews">⭐ Reviews</a></li>
+      <li><a href="#guidelines">📜 Guidelines</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <video autoplay muted loop playsinline>
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
+  <section class="hero-section" id="home">
+    <video autoplay muted loop>
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
     </video>
-    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="logo" />
-    <h1>Raja Lodge Ooty</h1>
-    <p>🏞️ Your trusted stay near Ooty Bus Stand & Railway Station – Over 20 years of hospitality excellence!</p>
+    <div class="hero-content">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
+      <h1>Welcome to Raja Lodge, Ooty</h1>
+      <p>Your home away from home in the Queen of Hills☁️🏔️.</p>
+      <div class="buttons">
+        <a href="tel:09843830181" class="btn-call">📞 Call Now</a>
+        <a href="https://wa.me/919843830181" class="btn-whatsapp">💬 WhatsApp</a>
+      </div>
+    </div>
   </section>
 
-  <!-- Sample Scroll Section -->
+  <!-- Add the rest of your sections here -->
   <section id="about">
-    <h2>About Us</h2>
-    <p>We are a family-run lodge located in the heart of Ooty, just 100 meters from both the bus stand and railway station. Enjoy a cozy and convenient stay with us!</p>
+    <!-- Paste your actual "About" code here -->
+  </section>
+
+  <section id="pricing">
+    <!-- Paste your actual "Pricing" code here -->
+  </section>
+
+  <section id="booking">
+    <!-- Paste your actual "Booking" code here -->
+  </section>
+
+  <section id="reviews">
+    <!-- Paste your actual "Reviews" code here -->
+  </section>
+
+  <section id="guidelines">
+    <!-- Paste your actual "Guidelines" code here -->
+  </section>
+
+  <section id="contact">
+    <!-- Paste your actual "Contact" code here -->
   </section>
 
 </body>
