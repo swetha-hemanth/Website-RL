@@ -2,195 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
       box-sizing: border-box;
+    }
+
+    body, html {
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
-    body {
-      background-color: #0d0d0d;
-      color: #f9f9f9;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: gold;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    .hero-section {
+    header {
       position: relative;
-      width: 100%;
       height: 100vh;
       overflow: hidden;
     }
 
-    .hero-section video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.7;
-    }
-
-    .hero-content {
+    header video {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
-    .hero-content img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      margin-bottom: 10px;
-      color: gold;
-    }
-
-    .hero-content p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
-
-    .hero-content .buttons {
+    nav {
+      width: 100%;
+      padding: 0.7rem 2rem;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      gap: 15px;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    nav .top-line {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      font-size: 14px;
+    }
+
+    nav .bottom-line {
+      margin-top: 5px;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
       flex-wrap: wrap;
     }
 
-    .hero-content .buttons a {
-      padding: 12px 20px;
-      border-radius: 25px;
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .home-content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .home-content img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    .home-content h1 {
+      font-size: 2.8rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .home-content p {
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+      color: #f0e9e9;
+      margin-bottom: 1rem;
+    }
+
+    .home-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .home-buttons a {
+      background: #FFD700;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-weight: 600;
       text-decoration: none;
-      color: #fff;
-      transition: 0.3s;
+      transition: background 0.3s ease;
     }
 
-    .btn-call {
-      background-color: #facc15;
-      color: #000;
-    }
-
-    .btn-whatsapp {
-      background-color: #22c55e;
+    .home-buttons a:hover {
+      background: #e6c200;
     }
 
     section {
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 30px;
+      .home-content h1 {
+        font-size: 2rem;
       }
 
-      .hero-content p {
-        font-size: 16px;
+      .home-content p {
+        font-size: 1rem;
       }
 
-      nav ul li a {
-        font-size: 14px;
+      nav .bottom-line {
+        gap: 1rem;
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
+
 <body>
-
-  <nav>
-    <div class="logo">
-      <img src="IMG-20250731-WA0005.jpg" alt="Logo" style="height: 40px; border-radius: 10px;">
-    </div>
-    <ul>
-      <li><a href="#home">🏠 Home</a></li>
-      <li><a href="#about">🏨 About</a></li>
-      <li><a href="#gallery">🖼️ Gallery</a></li>
-      <li><a href="#pricing">💰 Pricing</a></li>
-      <li><a href="#booking">📝 Booking</a></li>
-      <li><a href="#reviews">⭐ Reviews</a></li>
-      <li><a href="#guidelines">📜 Guidelines</a></li>
-      <li><a href="#contact">📞 Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero-section" id="home">
-    <video autoplay muted loop>
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
+  <header id="home">
+    <video autoplay muted loop playsinline>
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
     </video>
-    <div class="hero-content">
-      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
-      <h1>Welcome to Raja Lodge, Ooty</h1>
-      <p>Your home away from home in the Queen of Hills☁️🏔️.</p>
-      <div class="buttons">
-        <a href="tel:09843830181" class="btn-call">📞 Call Now</a>
-        <a href="https://wa.me/919843830181" class="btn-whatsapp">💬 WhatsApp</a>
+
+    <nav>
+      <div class="top-line">
+        <span>📍 5 min walk from Bus Stand & Railway Station</span>
+        <span>📞 +91 98438 30181</span>
+      </div>
+      <div class="bottom-line">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" />
+      <h1>Raja Lodge Ooty</h1>
+      <p>Welcome to your home away from home in the Queen of Hills.</p>
+      <div class="home-buttons">
+        <a href="tel:9843830181">Call Now</a>
+        <a href="https://wa.me/919843830181">WhatsApp</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Add the rest of your sections here -->
+  <!-- Add other sections here -->
   <section id="about">
-    <!-- Paste your actual "About" code here -->
+    <h2>About Us</h2>
+    <p>Coming soon...</p>
   </section>
 
   <section id="pricing">
-    <!-- Paste your actual "Pricing" code here -->
+    <h2>Pricing</h2>
+    <p>Coming soon...</p>
   </section>
 
   <section id="booking">
-    <!-- Paste your actual "Booking" code here -->
-  </section>
-
-  <section id="reviews">
-    <!-- Paste your actual "Reviews" code here -->
-  </section>
-
-  <section id="guidelines">
-    <!-- Paste your actual "Guidelines" code here -->
+    <h2>Booking</h2>
+    <p>Coming soon...</p>
   </section>
 
   <section id="contact">
-    <!-- Paste your actual "Contact" code here -->
+    <h2>Contact Us</h2>
+    <p>Reach us via call or WhatsApp for quick bookings!</p>
   </section>
-
 </body>
 </html>
