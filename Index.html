@@ -1,9 +1,9 @@
-                    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raja Lodge - Ooty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAJA LODGE</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins&display=swap" rel="stylesheet">
@@ -17,93 +17,93 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
+      background: #fff;
+      color: #333;
     }
 
+    /* Navigation Bar */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 15px 20px;
+      text-align: center;
+      color: white;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
 
-    .nav-left {
+    .welcome-text {
       font-family: 'Cinzel', serif;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      color: gold;
+      margin-bottom: 5px;
       font-weight: bold;
-      color: #FFD700;
     }
 
-    .nav-right a {
+    .lodge-name {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: gold;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: white;
       text-decoration: none;
-      color: #fff;
-      margin-left: 15px;
-      font-size: 0.95rem;
+      font-size: 1rem;
+      padding: 5px 10px;
+      transition: color 0.3s;
     }
 
-    .nav-right a:hover {
-      color: #FFD700;
+    .nav-links a:hover {
+      color: gold;
     }
 
+    /* Logo */
     .logo-container {
       display: flex;
       justify-content: center;
-      margin: 10px 0;
+      margin: 15px 0;
     }
 
     .logo-container img {
       width: 120px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
     }
 
+    /* Video */
     .video-section {
-      position: relative;
-      z-index: 1;
+      width: 100%;
+      overflow: hidden;
     }
 
     .video-section video {
       width: 100%;
       height: auto;
-      object-fit: cover;
     }
 
-    .welcome-text {
-      position: absolute;
-      top: 120px;
-      left: 20px;
-      color: #FFD700;
-      font-size: 1.5rem;
-      z-index: 2;
-      font-weight: bold;
-      text-shadow: 1px 1px 5px black;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-right {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      .nav-right a {
-        margin: 5px 0;
-      }
-
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
       .welcome-text {
         font-size: 1.2rem;
-        top: 100px;
+      }
+
+      .lodge-name {
+        font-size: 1.6rem;
+      }
+
+      .nav-links {
+        gap: 10px;
       }
 
       .logo-container img {
@@ -114,10 +114,11 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navbar -->
   <nav>
-    <div class="nav-left">🌄 Welcome to<br>RAJA LODGE</div>
-    <div class="nav-right">
+    <div class="welcome-text">🌄 WELCOME TO</div>
+    <div class="lodge-name">RAJA LODGE</div>
+    <div class="nav-links">
       <a href="index.html">home🏠</a>
       <a href="about.html">About🏡</a>
       <a href="gallery.html">Gallery🖼️</a>
@@ -131,10 +132,10 @@
 
   <!-- Logo -->
   <div class="logo-container">
-    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" />
+    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
   </div>
 
-  <!-- Video Section -->
+  <!-- Video -->
   <div class="video-section">
     <video autoplay muted loop>
       <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
@@ -143,4 +144,5 @@
   </div>
 
 </body>
-</html>
+</html>                    
+    
