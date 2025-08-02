@@ -4,19 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-color: #111;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      z-index: 10;
+    }
+
+    nav img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffcc;
     }
 
     header {
@@ -27,195 +60,166 @@
 
     header video {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: -1;
     }
 
     header .overlay {
       position: absolute;
-      top: 0; left: 0;
+      top: 40%;
       width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.6);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      z-index: 10;
-    }
-
-    nav img {
-      height: 50px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .hero-content {
       text-align: center;
-      padding-top: 20vh;
+      color: white;
+      z-index: 1;
     }
 
-    .hero-content h1 {
-      font-size: 3rem;
+    header .overlay h1 {
       font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    header .overlay p {
+      font-size: 1.2rem;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 60px 30px;
+      background-color: #000;
+      color: #fff;
     }
 
     section h2 {
-      text-align: center;
-      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
       margin-bottom: 20px;
+      text-align: center;
+      color: #00ffcc;
     }
 
-    .gallery img {
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
       width: 100%;
       border-radius: 10px;
-      margin-bottom: 20px;
     }
 
     .pricing-box {
-      background: rgba(255,255,255,0.1);
+      background-color: #1a1a1a;
       padding: 20px;
       border-radius: 15px;
       margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ffcc44;
     }
 
-    .contact-box a {
-      color: #00ffcc;
-      text-decoration: none;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #aaa;
     }
 
     iframe {
       width: 100%;
       height: 300px;
       border: none;
-      border-radius: 10px;
       margin-top: 20px;
-    }
-
-    footer {
-      text-align: center;
-      background: #111;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    @media screen and (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 10px;
-      }
-
-      .hero-content h1 {
-        font-size: 2rem;
-      }
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <video autoplay muted loop playsinline>
-    <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4" />
-  </video>
-  <div class="overlay"></div>
   <nav>
     <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
     <ul>
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#booking">Booking</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <div class="hero-content">
-    <h1>Welcome to Raja Lodge, Ooty</h1>
-    <p>Your comfort stay near Ooty Bus Stand & Railway Station</p>
-  </div>
-</header>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>With over 20 years of trusted service, Raja Lodge offers affordable and family-friendly rooms in the heart of Ooty. Located just 100 meters from both the bus stand and railway station, we provide convenience, safety, and the comfort of a home away from home.</p>
-</section>
+  <header id="home">
+    <video autoplay muted loop>
+      <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>Welcome to Raja Lodge, Ooty</h1>
+      <p>5 Minutes from Bus Stand & Railway Station • 20+ Years of Trust</p>
+    </div>
+  </header>
 
-<section id="gallery" class="gallery">
-  <h2>Gallery</h2>
-  <img src="https://i.ibb.co/YXjRzjC/lodge-room.jpg" alt="Room View">
-  <img src="https://i.ibb.co/1qtnnW3/lodge-hall.jpg" alt="Hall View">
-</section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: auto; font-size: 1.1rem;">
+      Raja Lodge is your perfect stay in the heart of Ooty. With cozy rooms, warm hospitality, and unmatched convenience, we’ve served guests for over two decades with excellence.
+    </p>
+  </section>
 
-<section id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-box">
-    <h3>Standard Room</h3>
-    <p>₹999/night – Ideal for solo or duo travelers</p>
-  </div>
-  <div class="pricing-box">
-    <h3>Deluxe Room</h3>
-    <p>₹1499/night – Great for couples and families</p>
-  </div>
-  <div class="pricing-box">
-    <h3>Family Suite</h3>
-    <p>₹1999/night – Spacious with extra comfort</p>
-  </div>
-</section>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/300x200?text=Room+1" alt="">
+      <img src="https://via.placeholder.com/300x200?text=Room+2" alt="">
+      <img src="https://via.placeholder.com/300x200?text=Exterior" alt="">
+      <img src="https://via.placeholder.com/300x200?text=Lobby" alt="">
+    </div>
+  </section>
 
-<section id="reviews">
-  <h2>Customer Reviews</h2>
-  <p>⭐️⭐️⭐️⭐️⭐️ "Clean and safe rooms, perfect for my family visit!" – Kavitha</p>
-  <p>⭐️⭐️⭐️⭐️ "Location is a big plus. Walked from bus stand in 3 mins!" – Manoj</p>
-</section>
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-box">
+      <h3>Standard Room</h3>
+      <p>₹999 per night – Double Bed, Attached Bath, TV</p>
+    </div>
+    <div class="pricing-box">
+      <h3>Deluxe Room</h3>
+      <p>₹1499 per night – King Bed, View Balcony, 24/7 Hot Water</p>
+    </div>
+  </section>
 
-<section id="booking">
-  <h2>Booking</h2>
-  <p>Call or WhatsApp us directly to book your room. Online booking will be added soon.</p>
-  <p><strong>Phone:</strong> <a href="tel:+919843830181">98438 30181</a> / <a href="tel:+919843676822">98436 76822</a></p>
-  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919843830181" target="_blank">Click here to chat</a></p>
-</section>
+  <section id="booking">
+    <h2>Booking</h2>
+    <p style="text-align: center;">
+      📞 Call us directly to book your stay: <br>
+      <strong><a href="tel:+919843830181" style="color:#00ffcc;">98438 30181</a> / <a href="tel:+919843676822" style="color:#00ffcc;">98436 76822</a></strong> <br>
+      or <a href="https://wa.me/9843830181" style="color:#00ffcc;" target="_blank">Message on WhatsApp</a>
+    </p>
+  </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-box">
-    <p><strong>Email:</strong> <a href="mailto:rajalodge1980@gmail.com">rajalodge1980@gmail.com</a></p>
-    <p><strong>Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001</p>
+  <section id="reviews">
+    <h2>Reviews</h2>
+    <p style="max-width: 800px; margin: auto; font-style: italic; text-align: center;">
+      “Wonderful stay with family. Walkable from everything in Ooty!” – Kavitha R. <br>
+      “Best budget lodge with clean rooms and helpful staff.” – Aravind P.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">
+      <strong>Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001<br>
+      <strong>Email:</strong> <a href="mailto:rajalodge1980@gmail.com" style="color:#00ffcc;">rajalodge1980@gmail.com</a><br>
+      <strong>Phone:</strong> <a href="tel:+919843830181" style="color:#00ffcc;">98438 30181</a>, <a href="tel:+919843676822" style="color:#00ffcc;">98436 76822</a>
+    </p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.2527454458536!2d76.727754!3d11.411879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd00db6a3b45%3A0x8b1b3f598497729!2sRaja%20Lodge%2C%20Ooty!5e0!3m2!1sen!2sin!4v1721652000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Raja Lodge, Ooty. All Rights Reserved.</p>
-</footer>
+  <footer>
+    © 2025 Raja Lodge Ooty. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
