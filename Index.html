@@ -1,94 +1,79 @@
-  <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      scroll-behavior: smooth;
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
     }
-
-    body {
-      font-family: 'Poppins', sans-serif;
+    header, section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav a {
       color: white;
-      background-color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
     }
-
     video.bg-video {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       z-index: -1;
     }
-
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
-      text-align: center;
-      z-index: 10;
+    .logo {
+      width: 80px;
     }
-
-    header img {
-      height: 50px;
-    }
-
-    nav a {
-      margin: 0 12px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
     section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
-      backdrop-filter: blur(5px);
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 12px;
     }
-
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
-    }
-
     .gallery img {
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
       margin: 10px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #000;
+      border-radius: 10px;
     }
-
     .pricing-table {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
     }
-
-    .price-card {
-      background: rgba(0,0,0,0.7);
+    .pricing-box {
+      background: #111;
+      border: 1px solid #555;
+      margin: 15px;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 10px;
       width: 250px;
-      box-shadow: 0 0 10px #333;
     }
-
-    footer {
-      text-align: center;
+    .contact-box {
       padding: 30px;
-      background: rgba(0,0,0,0.8);
     }
-
     iframe {
       width: 100%;
       height: 300px;
@@ -97,98 +82,53 @@
     }
   </style>
 </head>
-<body>
-
-  <video autoplay muted loop class="bg-video">
+<body>  <video autoplay loop muted playsinline class="bg-video">
     <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4">
-  </video>
-
-  <header>
-    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" />
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#booking">Booking</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#guidelines">Guidelines</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section id="home">
+  </video>  <nav>
+    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="logo">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>  <header id="home">
     <h1>Welcome to Raja Lodge Ooty</h1>
-    <p>Your peaceful stay in the Queen of Hills. Steps away from the bus stand and railway station!</p>
-  </section>
-
-  <section id="about">
+    <p>Your home away from home in the Queen of Hills 🌄</p>
+  </header>  <section id="about">
     <h2>About Us</h2>
-    <p>With over 45 years of experience, Raja Lodge Ooty is a trusted name in hospitality. Situated in the heart of Ooty, we offer clean, cozy, and affordable rooms just 100 meters from the main bus stand. Our long-standing commitment to service and comfort ensures a memorable stay for every guest.</p>
-  </section>
-
-  <section id="gallery" class="gallery">
+    <p>With 45 years of trusted service in the heart of Ooty, Raja Lodge offers a peaceful, budget-friendly stay near the bus stand. Whether you're traveling with family, friends, or on business, we ensure a comfortable and memorable experience.</p>
+  </section>  <section id="gallery" class="gallery">
     <h2>Gallery</h2>
-    <img src="https://iili.io/Hz4h4pN.jpg" alt="Room View" />
-    <img src="https://iili.io/Hz4hZV2.jpg" alt="Front View" />
-    <img src="https://iili.io/Hz4hr3t.jpg" alt="Bed Setup" />
-  </section>
-
-  <section id="pricing">
+    <img src="https://i.imgur.com/A5W3EyL.jpg" alt="Room 1">
+    <img src="https://i.imgur.com/yMdw20U.jpg" alt="Room 2">
+    <img src="https://i.imgur.com/pYKfeqD.jpg" alt="Exterior View">
+  </section>  <section id="pricing">
     <h2>Pricing</h2>
     <div class="pricing-table">
-      <div class="price-card">
-        <h3>Standard Room</h3>
-        <p>₹1000 / night</p>
-        <p>2 Guests · Double Bed · TV</p>
+      <div class="pricing-box">
+        <h3>Single Room</h3>
+        <p>₹800/night</p>
+        <p>Perfect for solo travelers</p>
       </div>
-      <div class="price-card">
-        <h3>Deluxe Room</h3>
-        <p>₹1400 / night</p>
-        <p>2 Guests · Spacious · TV · Geyser</p>
+      <div class="pricing-box">
+        <h3>Double Room</h3>
+        <p>₹1200/night</p>
+        <p>Comfortable stay for two</p>
       </div>
-      <div class="price-card">
+      <div class="pricing-box">
         <h3>Family Room</h3>
-        <p>₹2000 / night</p>
-        <p>4 Guests · 2 Beds · TV · Balcony</p>
+        <p>₹2000/night</p>
+        <p>Spacious room for 4+ guests</p>
       </div>
     </div>
-  </section>
-
-  <section id="booking">
-    <h2>Booking</h2>
-    <p>📞 Call us to reserve your stay instantly: <a href="tel:+919843830181" style="color:lightgreen;">+91 98438 30181</a></p>
-    <p>💬 Or WhatsApp us for quick inquiry: <a href="https://wa.me/919843830181" target="_blank" style="color:lightgreen;">Chat Now</a></p>
-  </section>
-
-  <section id="reviews">
-    <h2>Reviews</h2>
-    <p>⭐️⭐️⭐️⭐️⭐️ “Amazing location and clean rooms!”</p>
-    <p>⭐️⭐️⭐️⭐️ “Very close to bus stand. Budget friendly.”</p>
-    <p>⭐️⭐️⭐️⭐️⭐️ “Staff were very helpful. Will come again.”</p>
-  </section>
-
-  <section id="guidelines">
-    <h2>Guidelines</h2>
-    <p>✔️ Check-in: 12 PM · Check-out: 11 AM</p>
-    <p>✔️ Government ID required</p>
-    <p>✔️ No smoking in rooms</p>
-    <p>✔️ Pets not allowed</p>
-  </section>
-
-  <section id="contact">
+  </section>  <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> <a href="tel:+919843830181" style="color:#00ff99;">98438 30181</a>, <a href="tel:+919843676822" style="color:#00ff99;">98436 76822</a></p>
-    <p><strong>Email:</strong> <a href="mailto:rajalodge1980@gmail.com" style="color:#00ff99;">rajalodge1980@gmail.com</a></p>
-    <p><strong>Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001</p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/9843830181" target="_blank" style="color:#00ff99;">Message on WhatsApp</a></p>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.2527454458536!2d76.727754!3d11.411879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd00db6a3b45%3A0x8b1b3f598497729!2sRaja%20Lodge%2C%20Ooty!5e0!3m2!1sen!2sin!4v1721652000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
-
-  <footer>
-    <p>© 2025 Raja Lodge Ooty. All rights reserved.</p>
-  </footer>
-
-</body>
+    <div class="contact-box">
+      <p><strong>Phone:</strong> <a href="tel:+919843830181">98438 30181</a>, <a href="tel:+919843676822">98436 76822</a></p>
+      <p><strong>Email:</strong> <a href="mailto:rajalodge1980@gmail.com">rajalodge1980@gmail.com</a></p>
+      <p><strong>Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/9843830181" target="_blank">Message on WhatsApp</a></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.2527454458536!2d76.727754!3d11.411879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd00db6a3b45%3A0x8b1b3f598497729!2sRaja%20Lodge%2C%20Ooty!5e0!3m2!1sen!2sin!4v1721652000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section></body>
 </html>
