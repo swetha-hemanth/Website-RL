@@ -37,7 +37,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      padding: 0;
     }
 
     nav ul li a {
@@ -78,6 +77,7 @@
     #logo {
       width: 120px;
       margin-top: 80px;
+      z-index: 1;
     }
 
     #title {
@@ -86,6 +86,7 @@
       font-weight: bold;
       margin: 20px 0;
       color: gold;
+      z-index: 1;
     }
 
     .buttons {
@@ -94,6 +95,7 @@
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 10px;
+      z-index: 1;
     }
 
     .buttons a {
@@ -136,6 +138,11 @@
       color: gold;
     }
 
+    section p {
+      font-size: 16px;
+      color: #ddd;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       nav ul {
@@ -169,10 +176,11 @@
     </ul>
   </nav>
 
-  <!-- Home Section with Video -->
+  <!-- Home Section with Background Video -->
   <section id="home">
-    <video autoplay muted loop>
+    <video autoplay muted loop playsinline>
       <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     <img id="logo" src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
     <div id="title">Raja Lodge Ooty</div>
@@ -196,157 +204,8 @@
   </section>
 
   <section id="pricing">
-        <h1>Room Pricing</h1>
-<meta charset="UTF-8">
-  <title>Raja Lodge - Pricing</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: url('image-1.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #f1f1f1;
-    }
-
-    nav {
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 12px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
-    }
-
-    nav a {
-      color: #ffd700;
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: 600;
-      font-size: 17px;
-      transition: color 0.3s ease;
-      font-family: 'Playfair Display', serif;
-    }
-
-    nav a:hover {
-      color: #00ffff;
-      text-shadow: 0 0 8px #00ffff;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 16px;
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
-    }
-
-    h1 {
-      color: #00ffff;
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      font-size: 40px;
-      margin-bottom: 30px;
-      text-shadow: 2px 2px 8px #000;
-    }
-
-    h2 {
-      color: #ffcc00;
-      margin-bottom: 12px;
-      margin-top: 32px;
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-    }
-
-    ul {
-      padding-left: 25px;
-      line-height: 1.9;
-      font-size: 17px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .highlight {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 18px;
-      margin-top: 35px;
-      border-left: 6px solid #00ffff;
-      border-radius: 10px;
-      font-size: 17px;
-    }
-
-    @media screen and (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .container {
-        margin: 25px;
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="pricing.html">💰 Pricing</a>
-    <a href="gallery.html">🖼️ Gallery</a>
-    <a href="reviews.html">⭐ Reviews</a>
-    <a href="contact.html">📞 Contact</a>
-  </nav>
-
-  <div class="container">
-    <h1>Room Pricing</h1>
-
-    <h2>Weekday Rates</h2>
-    <ul>
-      <li>Single Person: ₹600</li>
-      <li>Standard Room (2 persons): ₹700</li>
-      <li>Deluxe Room (2 persons): ₹900</li>
-      <li>Triple Bedroom (4 persons): ₹1000</li>
-    </ul>
-
-    <h2>Weekend Rates</h2>
-    <ul>
-      <li>Single Person: ₹700</li>
-      <li>Standard Room (2 persons): ₹900</li>
-      <li>Deluxe Room (2 persons): ₹1200</li>
-      <li>Triple Bedroom (4 persons): ₹1400</li>
-    </ul>
-
-    <h2>Seasonal Pricing (Apr 1 – Jun 10)</h2>
-    <ul>
-      <li>Standard Room (1 person): ₹1000</li>
-      <li>Standard Room (2 persons): ₹1200</li>
-      <li>Deluxe Room (2 persons): ₹1500</li>
-      <li>Triple Bedroom (4 persons): ₹1800</li>
-    </ul>
-
-    <h2>Peak Weekends / Holidays</h2>
-    <ul>
-      <li>Standard Room (1 person): ₹1500</li>
-      <li>Deluxe Room (2 persons): ₹2300</li>
-      <li>Triple Bedroom (4 persons): ₹2500</li>
-    </ul>
-
-    <div class="highlight">
-      🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
-      Vehicle: Swaraj Mazda Van
-    </div>
-  </div>
+    <h2>Pricing</h2>
+    <p>Best prices for cozy rooms.</p>
   </section>
 
   <section id="booking">
@@ -356,132 +215,13 @@
 
   <section id="reviews">
     <h2>Reviews</h2>
-    <p>  <form>
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" placeholder="Enter your name" required />
-
-    <label>Your Rating:</label>
-    <div class="star-rating">
-      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
-      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
-      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
-      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
-      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
-    </div>
-
-    <label for="comment">Your Review:</label>
-    <textarea id="comment" rows="5" placeholder="Write your review here..." required></textarea>
-
-    <button type="submit">Submit Review</button>
-  </form>
-
-  <!-- Sample People Reviews -->
-  <div class="review-section">
-    <h2>What Our Guests Say</h2>
-
-    <div class="review-card">
-      <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
-      <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
-    </div>
-
-    <div class="review-card">
-      <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
-      <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
-    </div>
-
-    <div class="review-card">
-      <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
-      <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
-    </div>
-  </div>
-
-  <!-- Go back to Home -->
-  <a class="home-link" href="index.html">← Back to Home</a></p>
+    <p>What our guests say...</p>
   </section>
 
   <section id="contact">
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-    }
-
-    header {
-      text-align: center;
-      padding: 30px 20px 10px;
-    }
-
-    header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: #ffe600;
-      margin: 0;
-    }
-
-    .contact-box {
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 30px;
-      max-width: 600px;
-      margin: 30px auto;
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.4);
-    }
-
-    .contact-box h3 {
-      font-size: 26px;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #ffd700;
-      padding-bottom: 8px;
-    }
-
-    .contact-box p {
-      font-size: 18px;
-      margin: 12px 0;
-    }
-
-    .contact-box a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-
-    .contact-box a:hover {
-      text-decoration: underline;
-    }
-
-    .map-placeholder {
-      width: 100%;
-      height: 300px;
-      background-image: url('https://via.placeholder.com/600x300.png?text=Map+Placeholder');
-      background-size: cover;
-      background-position: center;
-      margin-top: 20px;
-      border-radius: 12px;
-      border: 2px solid #ffffff30;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h2>📍 Contact Raja Lodge Ooty</h2>
-  </header>
-
-  <div class="contact-box">
-    <h3>Get in Touch</h3>
-    <p><strong>📞 Phone:</strong> <a href="tel:+919843830181">98438 30181</a>, <a href="tel:+919843676822">98436 76822</a></p>
-    <p><strong>📧 Email:</strong> <a href="mailto:rajalodge1980@gmail.com">rajalodge1980@gmail.com</a></p>
-    <p><strong>📍 Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001</p>
-    <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/919843830181" target="_blank">Message on WhatsApp</a></p>
-
-    <!-- Map Placeholder -->
-    <div class="map-placeholder" title="Map Placeholder (not real)"></div>
-  </div>
+    <h2>Contact Us</h2>
+    <p>📞 +91 98438 30181</p>
+    <p>📧 manju9041mp@gmail.com</p>
   </section>
 
 </body>
