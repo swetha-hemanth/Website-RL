@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet" />
 
   <style>
     * {
@@ -35,8 +35,8 @@
     <div class="overlay"></div>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 text-white backdrop-blur-md bg-black/40 px-6 py-4 flex justify-between items-center text-sm md:text-base">
-      <ul class="flex gap-4 md:gap-8">
+    <nav class="fixed top-0 left-0 w-full z-50 text-white backdrop-blur-md bg-black/40 px-4 py-3 flex flex-wrap justify-center md:justify-between items-center text-sm md:text-base">
+      <ul class="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6">
         <li><a href="#home" class="hover:text-yellow-400">🏠 Home</a></li>
         <li><a href="#about" class="hover:text-yellow-400">ℹ️ About</a></li>
         <li><a href="#gallery" class="hover:text-yellow-400">🖼️ Gallery</a></li>
@@ -48,5 +48,18 @@
     </nav>
 
     <!-- Logo + Welcome Text -->
-    <div id="home" class="relative z-10 h-screen flex flex-col items-center justify-center text-center px-4">
-      <img src="logo
+    <div id="home" class="relative z-10 h-screen flex flex-col items-center justify-center text-center px-6 sm:px-8">
+      <img src="logo.png" alt="Raja Lodge Logo" class="w-24 sm:w-32 md:w-40 mb-4 rounded-full shadow-lg border-2 border-yellow-400" />
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-300 font-['Playfair Display']">Raja Lodge Ooty</h1>
+      <p class="mt-2 text-sm sm:text-lg md:text-xl text-white">🏞️ Your cozy stay near Ooty Bus Stand & Railway Station</p>
+
+      <!-- Buttons -->
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="tel:+919843830181" class="bg-yellow-400 text-black px-6 py-2 rounded-full shadow-md text-sm sm:text-base hover:bg-yellow-300 transition">📞 Call Now</a>
+        <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 text-white px-6 py-2 rounded-full shadow-md text-sm sm:text-base hover:bg-green-400 transition">💬 WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
