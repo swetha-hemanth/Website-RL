@@ -1,69 +1,97 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raja Lodge - Ooty</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Raja Lodge Ooty - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
       overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
     }
-    video#bgVideo {
-      position: fixed;
+
+    header video {
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
       z-index: -1;
     }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2.5rem;
+      text-align: center;
+      z-index: 1;
+    }
+
+    nav {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+    }
+
     .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 50;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1DA851;
     }
   </style>
 </head>
-<body class="text-white font-sans">
+<body>
 
-  <!-- Background Video -->
-  <video autoplay muted loop id="bgVideo">
-    <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between p-4 fixed top-0 w-full z-50">
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Raja Lodge Logo" class="logo mr-3">
+      <span class="text-white text-xl font-bold">Raja Lodge Ooty</span>
+    </div>
+    <div class="space-x-4 text-white font-semibold hidden md:flex">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="about.html" class="hover:text-yellow-400">About</a>
+      <a href="gallery.html" class="hover:text-yellow-400">Gallery</a>
+      <a href="pricing.html" class="hover:text-yellow-400">Pricing</a>
+      <a href="booking.html" class="hover:text-yellow-400">Booking</a>
+      <a href="review.html" class="hover:text-yellow-400">Reviews</a>
+      <a href="guidelines.html" class="hover:text-yellow-400">Guidelines</a>
+      <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+      <a href="https://wa.me/919843830181" class="whatsapp-btn">WhatsApp</a>
+    </div>
+  </nav>
 
-  <!-- Transparent Navbar -->
-  <header class="fixed w-full top-0 left-0 bg-black bg-opacity-40 backdrop-blur-md z-50">
-    <nav class="flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl font-bold text-yellow-400">Raja Lodge</h1>
-      <ul class="flex space-x-6 text-sm md:text-base">
-        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-        <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
-        <li><a href="pricing.html" class="hover:text-yellow-400">Pricing</a></li>
-        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
-        <li><a href="review.html" class="hover:text-yellow-400">Reviews</a></li>
-        <li><a href="guidelines.html" class="hover:text-yellow-400">Guidelines</a></li>
-        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Video Background -->
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-text">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Raja Lodge Ooty</h1>
+      <p class="text-lg md:text-xl">Your home away from home in the Queen of Hills</p>
+    </div>
   </header>
 
-  <!-- Home Content -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-    <h2 class="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-4">Welcome to Raja Lodge, Ooty</h2>
-    <p class="text-lg md:text-xl max-w-xl">Your perfect stay just 5 minutes from the Ooty Bus Stand and Railway Station. Experience comfort, elegance, and convenience at its finest.</p>
-  </section>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919843830181" class="whatsapp-btn" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
-  </a>
-
 </body>
-</html>    
+</html>
