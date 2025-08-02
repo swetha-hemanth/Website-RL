@@ -2,55 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Playfair Display', serif;
+    html {
+      scroll-behavior: smooth;
     }
-    .gold-text {
-      color: #d4af37;
+    video::-webkit-media-controls {
+      display: none !important;
     }
   </style>
 </head>
-<body class="relative text-white">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
-    <source src="https://swetha-raja-lodge.s3.ap-south-1.amazonaws.com/InShot_20250802_135353047+(1).mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<body class="bg-black text-white font-sans">
 
-  <!-- Navbar -->
-  <nav class="w-full flex justify-between items-center p-4 bg-black bg-opacity-40 fixed top-0 z-10">
-    <div class="flex items-center space-x-3">
-      <img src="https://i.ibb.co/9Vs0pj0/rajalodge-logo.png" alt="Raja Lodge Logo" class="h-10 w-auto"/>
-      <h1 class="text-xl font-bold gold-text">Raja Lodge</h1>
-    </div>
-    <ul class="hidden md:flex space-x-6 text-white font-semibold">
-      <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
-      <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-      <li><a href="#gallery" class="hover:text-yellow-400">Gallery</a></li>
-      <li><a href="#pricing" class="hover:text-yellow-400">Pricing</a></li>
-      <li><a href="#booking" class="hover:text-yellow-400">Booking</a></li>
-      <li><a href="#reviews" class="hover:text-yellow-400">Reviews</a></li>
-      <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Hero Section with Video Background -->
+  <header class="relative h-screen w-full" id="home">
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Hero Section -->
-  <section id="home" class="flex items-center justify-center h-screen text-center px-6">
-    <div class="max-w-3xl">
-      <h2 class="text-4xl md:text-6xl font-bold gold-text drop-shadow-md mb-6">Welcome to Raja Lodge, Ooty</h2>
-      <p class="text-lg md:text-xl text-white drop-shadow-md mb-8 font-roboto">
-        Your perfect stay in the Queen of Hills 🌄 With over 45 years of hospitality!
-      </p>
-      <div class="flex justify-center space-x-6">
-        <a href="tel:09843830181" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full shadow-md transition">Call Now</a>
-        <a href="https://wa.me/919843830181" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-md transition">WhatsApp</a>
+    <!-- Transparent Navbar -->
+    <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-black bg-opacity-40 backdrop-blur-md z-10">
+      <div class="flex items-center space-x-3">
+        <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="h-12 w-auto rounded-xl shadow-lg" />
+        <span class="text-xl font-semibold text-yellow-400">Raja Lodge</span>
+      </div>
+      <ul class="flex space-x-4 text-sm font-medium">
+        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+        <li><a href="#gallery" class="hover:text-yellow-400">Gallery</a></li>
+        <li><a href="#pricing" class="hover:text-yellow-400">Pricing</a></li>
+        <li><a href="#booking" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="#reviews" class="hover:text-yellow-400">Reviews</a></li>
+        <li><a href="#guidelines" class="hover:text-yellow-400">Guidelines</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Overlay Content -->
+    <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-4">Welcome to Raja Lodge</h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">Your perfect stay in the heart of Ooty 🌄</p>
+      <div class="flex space-x-4">
+        <a href="tel:+919384989077" class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold shadow hover:bg-yellow-300 transition">Call Now</a>
+        <a href="https://wa.me/919843830181" class="bg-green-500 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-green-400 transition">WhatsApp</a>
       </div>
     </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-black text-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-6">About Raja Lodge</h2>
+      <p class="text-lg text-gray-300 leading-loose">
+        ✨ For over <span class="font-semibold text-white">20 years</span>, Raja Lodge has been a trusted home away from home in the heart of Ooty — the Queen of Hills.  
+        <br><br>
+        🏨 Located just <span class="text-white">5 minutes</span> from the Bus Stand and Railway Station, we offer comfort, warmth, and unforgettable hospitality for every traveler.  
+        <br><br>
+        🍃 Whether you're here to relax in nature or explore the town, our lodge ensures a peaceful stay, friendly service, and easy access to all major attractions.
+      </p>
+    </div>
   </section>
+
+  <!-- 🔜 Next: Add Gallery, Pricing, Booking, etc. -->
+  <!-- I can continue building each section exactly like this -->
+
 </body>
 </html>
