@@ -207,7 +207,47 @@
 
   <section id="reviews">
     <h2>Reviews</h2>
-    <p>What our guests say...</p>
+    <p>  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
+
+    <label>Your Rating:</label>
+    <div class="star-rating">
+      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+    </div>
+
+    <label for="comment">Your Review:</label>
+    <textarea id="comment" rows="5" placeholder="Write your review here..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <!-- Sample People Reviews -->
+  <div class="review-section">
+    <h2>What Our Guests Say</h2>
+
+    <div class="review-card">
+      <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
+      <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
+      <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
+      <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
+    </div>
+  </div>
+
+  <!-- Go back to Home -->
+  <a class="home-link" href="index.html">← Back to Home</a></p>
   </section>
 
   <section id="contact">
