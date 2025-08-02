@@ -2,164 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    body {
+      font-family: 'Montserrat', sans-serif;
     }
-
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      overflow: hidden;
+    .font-logo {
+      font-family: 'Playfair Display', serif;
     }
-
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem 2rem;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      color: gold;
-    }
-
-    .nav-top {
-      font-family: 'Cinzel Decorative', cursive;
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: gold;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: white;
-    }
-
-    .logo {
-      width: 100px;
-      margin: 80px auto 10px;
-      display: block;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding-top: 80px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      font-family: 'Cinzel Decorative', cursive;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 5px black;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      background-color: gold;
-      color: black;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: 0.3s;
-    }
-
-    .buttons a:hover {
-      background-color: white;
-      color: black;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
+    .overlay {
+      background: rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
-<body>
+<body class="text-white bg-black overflow-x-hidden">
 
-  <!-- 🔁 Background Video -->
-  <video autoplay muted loop class="video-background">
-    <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
-    Your browser does not support the video tag.
+  <!-- Background video -->
+  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-10">
+    <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
   </video>
 
-  <!-- 🔝 Transparent Navbar -->
-  <nav>
-    <div class="nav-top">RAJA LODGE OOTY</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="booking.html">Booking</a>
-      <a href="review.html">Reviews</a>
-      <a href="guidelines.html">Guidelines</a>
-      <a href="contact.html">Contact</a>
+  <!-- Navbar -->
+  <nav class="w-full fixed top-0 left-0 z-50 bg-black/60 backdrop-blur-sm shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-xl font-semibold text-gold">
+        <a href="#" class="text-white font-logo text-2xl tracking-wide">Raja Lodge</a>
+      </div>
+      <div class="space-x-4 hidden md:flex">
+        <a href="#about" class="hover:text-yellow-400">About</a>
+        <a href="#gallery" class="hover:text-yellow-400">Gallery</a>
+        <a href="#pricing" class="hover:text-yellow-400">Pricing</a>
+        <a href="#booking" class="hover:text-yellow-400">Booking</a>
+        <a href="#review" class="hover:text-yellow-400">Review</a>
+        <a href="#guidelines" class="hover:text-yellow-400">Guidelines</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <!-- 🖼️ Logo -->
-  <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="logo">
+  <!-- Logo below navbar -->
+  <div class="pt-24 flex justify-center">
+    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 md:w-40">
+  </div>
 
-  <!-- 💬 Welcome & CTA Buttons -->
-  <section class="hero">
-    <h1>Welcome to Raja Lodge — Your Home in Ooty</h1>
-    <div class="buttons">
-      <a href="tel:+919843830181">📞 Call Now</a>
-      <a href="https://wa.me/919843830181" target="_blank">💬 WhatsApp</a>
+  <!-- Welcome Text + Buttons -->
+  <section class="text-center mt-6 px-4">
+    <h1 class="text-4xl md:text-5xl font-logo text-white drop-shadow-lg">Welcome to Raja Lodge, Ooty</h1>
+    <p class="text-lg md:text-xl mt-2">Your cozy home in the Queen of Hills 🌄</p>
+    <div class="mt-6 space-y-4 md:space-y-0 md:space-x-6 flex flex-col md:flex-row justify-center items-center">
+      <a href="tel:09843830181" class="bg-yellow-400 text-black px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition">📞 Call Now</a>
+      <a href="https://wa.me/919843830181" class="bg-green-500 text-white px-6 py-2 rounded-full shadow hover:bg-green-600 transition">💬 WhatsApp Now</a>
     </div>
   </section>
 
 </body>
 </html>
+  
