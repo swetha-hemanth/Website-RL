@@ -1,4 +1,4 @@
-                        <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,23 +9,22 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      background-image: url('bg.jpg'); /* 🔄 Use your new background image here */
+      background: url('https://cdn.pixabay.com/photo/2020/11/23/18/53/hotel-5769491_1280.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      color: #fff;
     }
 
     header {
       text-align: center;
-      padding: 20px;
+      padding: 30px 10px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
 
     header h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px;
+      font-size: 32px;
       color: #ffffff;
+      margin: 0;
     }
 
     .contact-box {
@@ -34,13 +33,13 @@
       max-width: 600px;
       margin: 40px auto;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
     .contact-box h3 {
       margin-top: 0;
-      font-size: 24px;
-      border-bottom: 2px solid #aaa;
+      font-size: 26px;
+      border-bottom: 2px solid #00ffcc;
       padding-bottom: 10px;
     }
 
@@ -50,8 +49,12 @@
     }
 
     .contact-box a {
-      color: #00ff99;
+      color: #00ffcc;
       text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
     }
 
     iframe {
@@ -60,6 +63,21 @@
       border: none;
       margin-top: 20px;
       border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h2 {
+        font-size: 24px;
+      }
+
+      .contact-box {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .contact-box h3 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
@@ -81,4 +99,4 @@
   </div>
 
 </body>
-</html>
+</html>                       
