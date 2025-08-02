@@ -4,58 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .section-title {
+      @apply text-3xl font-bold text-white text-center mb-4;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-black text-white relative">
+
+  <!-- Background Video -->
+  <video autoplay loop muted class="fixed w-full h-full object-cover z-[-1]">
+    <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4">
+  </video>
 
   <!-- Navbar -->
-  <header class="sticky top-0 bg-white shadow z-20">
-    <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Raja Lodge Ooty</h1>
-      <ul class="flex space-x-4 text-sm md:text-base">
-        <li><a href="#home" class="hover:text-green-600">Home</a></li>
-        <li><a href="#about" class="hover:text-green-600">About</a></li>
-        <li><a href="#gallery" class="hover:text-green-600">Gallery</a></li>
-        <li><a href="#pricing" class="hover:text-green-600">Pricing</a></li>
-        <li><a href="#booking" class="hover:text-green-600">Booking</a></li>
-        <li><a href="#reviews" class="hover:text-green-600">Reviews</a></li>
-        <li><a href="#guidelines" class="hover:text-green-600">Guidelines</a></li>
-        <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="fixed w-full top-0 left-0 z-10 bg-overlay backdrop-blur-md shadow-md">
+    <div class="flex justify-between items-center px-4 py-2">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="h-12 rounded-lg"/>
+      <nav class="space-x-4 text-white">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#gallery" class="hover:underline">Gallery</a>
+        <a href="#pricing" class="hover:underline">Pricing</a>
+        <a href="#booking" class="hover:underline">Booking</a>
+        <a href="#review" class="hover:underline">Review</a>
+        <a href="#guidelines" class="hover:underline">Guidelines</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative h-screen w-full overflow-hidden">
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-      <source src="videos/new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Overlay Content -->
-    <div class="relative z-10 flex flex-col items-center justify-center h-full bg-black bg-opacity-50 text-white text-center px-4">
-      <!-- Logo -->
-      <img src="images/IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 md:w-48 mb-6 rounded-full shadow-xl border-4 border-white" />
-
-      <!-- Heading and Button -->
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Raja Lodge Ooty</h1>
-      <p class="text-lg md:text-2xl mb-6">Your home away from home in the Queen of Hills</p>
-      <a href="#booking" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg transition-all">Book Now</a>
-    </div>
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+    <h1 class="text-5xl font-extrabold text-white mb-4">Welcome to Raja Lodge, Ooty</h1>
+    <p class="text-xl text-gray-200 max-w-xl">Your home away from home in the Queen of Hills. Experience peace, comfort, and nature like never before.</p>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 bg-white text-center px-6 md:px-12">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-6">About Us</h2>
-      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-        With over <span class="font-semibold text-green-800">45 years of heartfelt hospitality</span>, Raja Lodge Ooty has welcomed travelers from across the globe to experience comfort, warmth, and local charm. Nestled just minutes from the Ooty bus stand and railway station, our family-run lodge offers a peaceful stay with easy access to the best of the Queen of Hills.
-      </p>
+  <section id="about" class="py-16 px-6 bg-overlay">
+    <h2 class="section-title">About Us</h2>
+    <p class="text-center text-gray-200 max-w-3xl mx-auto">
+      With over <strong>45 years of excellence</strong>, Raja Lodge has been a trusted home for thousands of travelers visiting Ooty. Located just 100 meters from the bus stand and railway station, we offer comfortable rooms, warm hospitality, and unmatched convenience in the heart of the town.
+    </p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 px-6">
+    <h2 class="section-title">Gallery</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://i.ibb.co/przSBp2m/IMG-20250731-WA0013.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/k2mTTWD7/IMG-20250731-WA0014.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/PZ87YkMq/IMG-20250731-WA0015.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/5xS6Rpcq/IMG-20250731-WA0018.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/zhcLJGh9/IMG-20250731-WA0019.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/tPZYcQVF/IMG-20250731-WA0016.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/pjfhV320/IMG-20250731-WA0020.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/7J22kGz0/IMG-20250731-WA0021.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/pB9FWYX7/IMG-20250731-WA0022.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/N6v5kppp/IMG-20250731-WA0024.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/GvPyYMyD/IMG-20250731-WA0005.jpg" class="rounded-lg shadow-lg">
+      <img src="https://i.ibb.co/4wLh6XRT/IMG-20250731-WA0017.jpg" class="rounded-lg shadow-lg">
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- More sections will go here: pricing, booking, review, guidelines, contact -->
+  <!-- We'll add them in next steps -->
+
 </body>
 </html>
