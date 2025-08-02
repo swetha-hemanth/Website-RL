@@ -1,167 +1,167 @@
-          <!DOCTYPE html>
+                    <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Raja Lodge - Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raja Lodge - Reviews</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.ibb.co/GvPyYMyD/IMG-20250731-WA0005.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #f1f1f1;
-      background: #000;
+      padding: 20px;
+      backdrop-filter: blur(5px);
     }
 
-    /* Video Background */
-    .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100vw;
-      min-height: 100vh;
-      z-index: -1;
-      object-fit: cover;
-      filter: brightness(0.4);
-    }
-
-    nav {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 15px;
+    h1, h2 {
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     }
 
-    nav a {
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #ddd;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      background: #f8f8f8;
+    }
+
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .star-rating input {
+      display: none;
+    }
+
+    .star-rating label {
+      font-size: 30px;
+      color: #aaa;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: gold;
+    }
+
+    button {
+      background-color: #25D366;
       color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
+      padding: 10px 20px;
       font-size: 16px;
-      transition: color 0.3s ease;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
-    nav a:hover {
-      color: #00e6e6;
-      text-decoration: underline;
+    button:hover {
+      background-color: #1cae5e;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 25px;
-      background-color: rgba(0, 0, 0, 0.65);
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+    .review-section {
+      max-width: 700px;
+      margin: 40px auto;
     }
 
-    h1 {
-      color: #00e6e6;
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 5px black;
-    }
-
-    h2 {
-      color: #ffcc00;
-      margin-bottom: 10px;
-      margin-top: 30px;
-      text-shadow: 1px 1px 3px black;
-    }
-
-    ul {
-      padding-left: 25px;
-      line-height: 1.8;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .highlight {
-      background-color: rgba(255, 255, 255, 0.08);
+    .review-card {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
       padding: 15px;
-      margin-top: 30px;
-      border-left: 5px solid #00e6e6;
       border-radius: 8px;
-      font-size: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
 
-    @media screen and (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+    .review-card strong {
+      font-size: 18px;
+    }
 
-      .container {
-        margin: 20px;
-        padding: 15px;
-      }
+    .review-card p {
+      margin: 5px 0 0;
+    }
+
+    a.home-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Video Only on Homepage -->
-  <video autoplay muted loop playsinline class="video-bg">
-    <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <h1>Share Your Experience at Raja Lodge</h1>
 
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="pricing.html">💰 Pricing</a>
-    <a href="gallery.html">🖼️ Gallery</a>
-    <a href="reviews.html">⭐ Reviews</a>
-    <a href="contact.html">📞 Contact</a>
-  </nav>
+  <!-- Review Form -->
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
 
-  <div class="container">
-    <h1>Room Pricing</h1>
+    <label>Your Rating:</label>
+    <div class="star-rating">
+      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+    </div>
 
-    <h2>Weekday Rates</h2>
-    <ul>
-      <li>Single Person: ₹600</li>
-      <li>Standard Room (2 persons): ₹700</li>
-      <li>Deluxe Room (2 persons): ₹900</li>
-      <li>Triple Bedroom (4 persons): ₹1000</li>
-    </ul>
+    <label for="comment">Your Review:</label>
+    <textarea id="comment" rows="5" placeholder="Write your review here..." required></textarea>
 
-    <h2>Weekend Rates</h2>
-    <ul>
-      <li>Single Person: ₹700</li>
-      <li>Standard Room (2 persons): ₹900</li>
-      <li>Deluxe Room (2 persons): ₹1200</li>
-      <li>Triple Bedroom (4 persons): ₹1400</li>
-    </ul>
+    <button type="submit">Submit Review</button>
+  </form>
 
-    <h2>Seasonal Pricing (Apr 1 – Jun 10)</h2>
-    <ul>
-      <li>Standard Room (1 person): ₹1000</li>
-      <li>Standard Room (2 persons): ₹1200</li>
-      <li>Deluxe Room (2 persons): ₹1500</li>
-      <li>Triple Bedroom (4 persons): ₹1800</li>
-    </ul>
+  <!-- Sample People Reviews -->
+  <div class="review-section">
+    <h2>What Our Guests Say</h2>
 
-    <h2>Peak Weekends / Holidays</h2>
-    <ul>
-      <li>Standard Room (1 person): ₹1500</li>
-      <li>Deluxe Room (2 persons): ₹2300</li>
-      <li>Triple Bedroom (4 persons): ₹2500</li>
-    </ul>
+    <div class="review-card">
+      <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
+      <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
+    </div>
 
-    <div class="highlight">
-      🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
-      Vehicle: Swaraj Mazda Van
+    <div class="review-card">
+      <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
+      <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
+      <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
     </div>
   </div>
+
+  <!-- Go back to Home -->
+  <a class="home-link" href="index.html">← Back to Home</a>
 
 </body>
 </html>
