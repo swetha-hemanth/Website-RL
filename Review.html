@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raja Lodge - Reviews</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      padding: 20px;
+    }
 
+    h1, h2 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .star-rating input {
+      display: none;
+    }
+
+    .star-rating label {
+      font-size: 30px;
+      color: gray;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: gold;
+    }
+
+    button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1cae5e;
+    }
+
+    .review-section {
+      max-width: 700px;
+      margin: 40px auto;
+    }
+
+    .review-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .review-card {
+      background-color: #fff;
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .review-card strong {
+      font-size: 18px;
+    }
+
+    .review-card p {
+      margin: 5px 0 0;
+    }
+
+    a.home-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Share Your Experience at Raja Lodge</h1>
+
+  <!-- Review Form -->
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
+
+    <label>Your Rating:</label>
+    <div class="star-rating">
+      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+    </div>
+
+    <label for="comment">Your Review:</label>
+    <textarea id="comment" rows="5" placeholder="Write your review here..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <!-- Sample People Reviews -->
+  <div class="review-section">
+    <h2>What Our Guests Say</h2>
+
+    <div class="review-card">
+      <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
+      <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
+      <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
+      <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
+    </div>
+  </div>
+
+  <!-- Go back to Home -->
+  <a class="home-link" href="index.html">← Back to Home</a>
+
+</body>
+</html>
