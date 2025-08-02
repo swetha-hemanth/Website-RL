@@ -2,93 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
     }
-    .title-font {
+
+    .custom-font {
       font-family: 'Playfair Display', serif;
     }
-    .navbar-blur {
-      backdrop-filter: blur(12px);
-      background: rgba(0, 0, 0, 0.5);
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .logo-img {
+      width: 80px;
+      height: auto;
+    }
+
+    .hero-section {
+      height: 100vh;
+      position: relative;
+    }
+
+    video {
+      object-fit: cover;
+    }
+
+    @media (max-width: 640px) {
+      .logo-img {
+        width: 60px;
+      }
+
+      .hero-title {
+        font-size: 1.6rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
-<body class="text-white bg-black">
+<body class="bg-black text-white">
 
-  <!-- Hero Section -->
-  <section class="relative h-screen w-full overflow-hidden">
-    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
-    </video>
-
-    <!-- Navbar -->
-    <nav class="navbar-blur fixed top-0 left-0 w-full z-10 text-white shadow-md px-4 py-3">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-        <div class="flex items-center space-x-2">
-          <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-14 h-14 object-cover rounded-full shadow-md" />
-          <div class="text-lg font-bold title-font text-yellow-400 tracking-wide">Raja Lodge 🏨<br><span class="text-sm text-white font-normal">Ooty 🌲 | Est. 2000</span></div>
-        </div>
-        <ul class="mt-2 md:mt-0 flex flex-wrap gap-4 text-sm md:text-base font-semibold justify-center md:justify-end">
-          <li><a href="#" class="hover:text-yellow-300">🏠 Home</a></li>
-          <li><a href="#about" class="hover:text-yellow-300">📜 About</a></li>
-          <li><a href="#gallery" class="hover:text-yellow-300">🖼️ Gallery</a></li>
-          <li><a href="#pricing" class="hover:text-yellow-300">💰 Pricing</a></li>
-          <li><a href="#booking" class="hover:text-yellow-300">📆 Booking</a></li>
-          <li><a href="#reviews" class="hover:text-yellow-300">⭐ Reviews</a></li>
-          <li><a href="#contact" class="hover:text-yellow-300">📞 Contact</a></li>
-        </ul>
+  <!-- Navbar -->
+  <header class="fixed w-full z-50 bg-black bg-opacity-70">
+    <div class="flex flex-col md:flex-row items-center justify-between px-4 py-2">
+      <div class="flex items-center space-x-3">
+        <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="logo-img" />
+        <h1 class="text-xl sm:text-2xl font-bold custom-font text-white">Raja Lodge, Ooty 🏨</h1>
       </div>
-    </nav>
+      <nav class="mt-2 md:mt-0 flex flex-wrap justify-center gap-4 text-sm sm:text-base">
+        <a href="#home" class="hover:text-yellow-400">🏠 Home</a>
+        <a href="#about" class="hover:text-yellow-400">ℹ️ About</a>
+        <a href="#gallery" class="hover:text-yellow-400">🖼️ Gallery</a>
+        <a href="#pricing" class="hover:text-yellow-400">💰 Pricing</a>
+        <a href="#booking" class="hover:text-yellow-400">📅 Booking</a>
+        <a href="#reviews" class="hover:text-yellow-400">⭐ Reviews</a>
+        <a href="#contact" class="hover:text-yellow-400">📞 Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Content -->
-    <div class="relative z-10 flex flex-col justify-center items-center text-center h-full pt-20">
-      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-xl mb-4" />
-      <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 title-font leading-tight">Welcome to Raja Lodge</h1>
-      <p class="mt-2 text-lg text-white italic">Your cozy stay in the Queen of Hills, Ooty 🌄</p>
-      <div class="mt-6 flex space-x-4">
-        <a href="tel:09843830181" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-xl shadow transition">📞 Call Now</a>
-        <a href="https://wa.me/919843830181" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-xl shadow transition">💬 WhatsApp</a>
+  <!-- Home Section -->
+  <section id="home" class="hero-section">
+    <video autoplay muted loop class="absolute w-full h-full object-cover z-[-1]">
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay flex flex-col justify-center items-center text-center h-full px-4">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="logo-img mb-4" />
+      <h1 class="text-3xl sm:text-5xl font-bold custom-font text-white mb-2 hero-title">Welcome to Raja Lodge Ooty</h1>
+      <p class="text-yellow-300 text-lg sm:text-xl font-semibold hero-subtitle mb-6">🌄 Your home away from home in the Queen of Hills</p>
+      <div class="flex gap-4">
+        <a href="tel:+919384989077" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-xl shadow-lg transition">📞 Call Now</a>
+        <a href="https://wa.me/9843830181" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-xl shadow-lg transition">💬 WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <!-- Scrollable Page Placeholder (Paste other sections below here) -->
-  <main class="bg-black text-white">
-    <!-- About -->
-    <section id="about" class="py-20 px-6 md:px-12">
-      <!-- Paste your About section here -->
-    </section>
+  <!-- Placeholder Sections for Scrolling -->
+  <section id="about" class="h-screen bg-black text-white flex items-center justify-center">
+    <h2 class="text-3xl">About Section</h2>
+  </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="py-20 px-6 md:px-12">
-      <!-- Paste your Gallery section here -->
-    </section>
+  <section id="gallery" class="h-screen bg-gray-900 text-white flex items-center justify-center">
+    <h2 class="text-3xl">Gallery Section</h2>
+  </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="py-20 px-6 md:px-12">
-      <!-- Paste your Pricing section here -->
-    </section>
+  <section id="pricing" class="h-screen bg-black text-white flex items-center justify-center">
+    <h2 class="text-3xl">Pricing Section</h2>
+  </section>
 
-    <!-- Booking -->
-    <section id="booking" class="py-20 px-6 md:px-12">
-      <!-- Paste your Booking section here -->
-    </section>
+  <section id="booking" class="h-screen bg-gray-900 text-white flex items-center justify-center">
+    <h2 class="text-3xl">Booking Section</h2>
+  </section>
 
-    <!-- Reviews -->
-    <section id="reviews" class="py-20 px-6 md:px-12">
-      <!-- Paste your Reviews section here -->
-    </section>
+  <section id="reviews" class="h-screen bg-black text-white flex items-center justify-center">
+    <h2 class="text-3xl">Reviews Section</h2>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20 px-6 md:px-12">
-      <!-- Paste your Contact section here -->
-    </section>
-  </main>
+  <section id="contact" class="h-screen bg-gray-900 text-white flex items-center justify-center">
+    <h2 class="text-3xl">Contact Section</h2>
+  </section>
+
 </body>
-</html>
+      </html>
