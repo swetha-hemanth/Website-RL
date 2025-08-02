@@ -1,37 +1,46 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Raja Lodge - Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: url('bg.jpg') no-repeat center center fixed;
+      background: url('image-1.png') no-repeat center center fixed;
       background-size: cover;
-      color: #f1f1f1;
+      color: #fdfdfd;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
-      color: white;
+      color: #ffffff;
       text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
+      margin: 8px 15px;
+      font-weight: 600;
       font-size: 16px;
-      transition: color 0.3s ease;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
-      color: #00e6e6;
-      text-decoration: underline;
+      color: #ffcc00;
     }
 
     .container {
@@ -44,47 +53,59 @@
     }
 
     h1 {
-      color: #00e6e6;
       text-align: center;
-      font-size: 36px;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 5px black;
+      font-size: 34px;
+      margin-bottom: 25px;
+      color: #00ffff;
+      text-shadow: 1px 1px 6px black;
     }
 
     h2 {
-      color: #ffcc00;
-      margin-bottom: 10px;
+      color: #ffdd00;
       margin-top: 30px;
-      text-shadow: 1px 1px 3px black;
+      margin-bottom: 10px;
+      font-size: 22px;
+      text-shadow: 1px 1px 4px black;
     }
 
     ul {
       padding-left: 25px;
+      font-size: 17px;
       line-height: 1.8;
-    }
-
-    li {
-      margin-bottom: 8px;
     }
 
     .highlight {
       background-color: rgba(255, 255, 255, 0.08);
       padding: 15px;
       margin-top: 30px;
-      border-left: 5px solid #00e6e6;
+      border-left: 5px solid #00ffff;
       border-radius: 8px;
       font-size: 16px;
     }
 
+    /* ✅ Mobile Friendly */
     @media screen and (max-width: 600px) {
       nav a {
-        display: block;
-        margin: 10px 0;
+        flex: 1 1 100%;
+        text-align: center;
+        padding: 10px 0;
       }
 
       .container {
-        margin: 20px;
-        padding: 15px;
+        margin: 20px 15px;
+        padding: 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      ul {
+        font-size: 16px;
       }
     }
   </style>
