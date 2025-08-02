@@ -1,62 +1,57 @@
-        <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>About - Raja Lodge Ooty</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .font-logo {
-      font-family: 'Cinzel', serif;
+    .gold {
+      color: #D4AF37;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(6px);
-    }
-
-    .hero-text h1 {
-      text-shadow: 2px 2px 4px #000000;
-    }
-
-    .btn-gold {
-      background-color: #D4AF37;
-      color: black;
-    }
-
-    .btn-gold:hover {
-      background-color: #b9962f;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
     }
   </style>
 </head>
-<body class="bg-black text-white">
+<body>
 
-  <!-- Video Background -->
-  <div class="relative w-full h-screen overflow-hidden">
-    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
-    </video>
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 fixed w-full top-0 z-50">
+    <a href="index.html">
+      <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="h-12">
+    </a>
+    <ul class="flex space-x-6 text-white">
+      <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+      <li><a href="about.html" class="text-yellow-400 font-bold">About</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
+      <li><a href="pricing.html" class="hover:text-yellow-400">Pricing</a></li>
+      <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+      <li><a href="review.html" class="hover:text-yellow-400">Reviews</a></li>
+      <li><a href="guidelines.html" class="hover:text-yellow-400">Guidelines</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full flex justify-center z-20 p-4">
-      <ul class="flex space-x-4 md:space-x-6 text-white text-sm md:text-base">
-        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
-        <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
-        <li><a href="pricing.html" class="hover:text-yellow-400">Pricing</a></li>
-        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
-        <li><a href="review.html" class="hover:text-yellow-400">Reviews</a></li>
-        <li><a href="guidelines.html" class="hover:text-yellow-400">Guidelines</a></li>
-        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- About Section -->
+  <section class="pt-24 px-8 md:px-20 py-16 text-center">
+    <h1 class="text-4xl md:text-5xl gold font-semibold mb-6">About Raja Lodge, Ooty</h1>
+    <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+      Welcome to Raja Lodge – a trusted name in Ooty for over 45 years. We pride ourselves on delivering
+      cozy, budget-friendly accommodations just a short walk from Ooty’s Bus Stand and Railway Station.
+      Our guests enjoy a peaceful stay, warm hospitality, and easy access to all tourist spots.
+    </p>
+    <div class="flex justify-center">
+      <img src="image-1.png" alt="Raja Lodge Exterior" class="rounded-2xl shadow-lg w-full max-w-md">
+    </div>
+  </section>
 
-    <!-- Logo & Title -->
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-24 md:w-32 mb-
+</body>
+</html>      
