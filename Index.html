@@ -1,73 +1,62 @@
-      <!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
     }
-    video::-webkit-media-controls {
-      display: none !important;
+
+    .font-logo {
+      font-family: 'Cinzel', serif;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-text h1 {
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    .btn-gold {
+      background-color: #D4AF37;
+      color: black;
+    }
+
+    .btn-gold:hover {
+      background-color: #b9962f;
     }
   </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white">
 
-  <!-- Hero Section with Video Background -->
-  <header class="relative h-screen w-full" id="home">
-    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+  <!-- Video Background -->
+  <div class="relative w-full h-screen overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
       <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
 
-    <!-- Transparent Navbar -->
-    <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-black bg-opacity-40 backdrop-blur-md z-10">
-      <div class="flex items-center space-x-3">
-        <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="h-12 w-auto rounded-xl shadow-lg" />
-        <span class="text-xl font-semibold text-yellow-400">Raja Lodge</span>
-      </div>
-      <ul class="flex space-x-4 text-sm font-medium">
-        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-        <li><a href="#gallery" class="hover:text-yellow-400">Gallery</a></li>
-        <li><a href="#pricing" class="hover:text-yellow-400">Pricing</a></li>
-        <li><a href="#booking" class="hover:text-yellow-400">Booking</a></li>
-        <li><a href="#reviews" class="hover:text-yellow-400">Reviews</a></li>
-        <li><a href="#guidelines" class="hover:text-yellow-400">Guidelines</a></li>
-        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full flex justify-center z-20 p-4">
+      <ul class="flex space-x-4 md:space-x-6 text-white text-sm md:text-base">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
+        <li><a href="pricing.html" class="hover:text-yellow-400">Pricing</a></li>
+        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="review.html" class="hover:text-yellow-400">Reviews</a></li>
+        <li><a href="guidelines.html" class="hover:text-yellow-400">Guidelines</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Overlay Content -->
-    <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-      <h1 class="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-4">Welcome to Raja Lodge</h1>
-      <p class="text-lg md:text-xl text-gray-300 mb-8">Your perfect stay in the heart of Ooty 🌄</p>
-      <div class="flex space-x-4">
-        <a href="tel:+919384989077" class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold shadow hover:bg-yellow-300 transition">Call Now</a>
-        <a href="https://wa.me/919843830181" class="bg-green-500 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-green-400 transition">WhatsApp</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6 bg-black text-white">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-yellow-400 mb-6">About Raja Lodge</h2>
-      <p class="text-lg text-gray-300 leading-loose">
-        ✨ For over <span class="font-semibold text-white">20 years</span>, Raja Lodge has been a trusted home away from home in the heart of Ooty — the Queen of Hills.  
-        <br><br>
-        🏨 Located just <span class="text-white">5 minutes</span> from the Bus Stand and Railway Station, we offer comfort, warmth, and unforgettable hospitality for every traveler.  
-        <br><br>
-        🍃 Whether you're here to relax in nature or explore the town, our lodge ensures a peaceful stay, friendly service, and easy access to all major attractions.
-      </p>
-    </div>
-  </section>
-
-  <!-- 🔜 Next: Add Gallery, Pricing, Booking, etc. -->
-  <!-- I can continue building each section exactly like this -->
-
-</body>
-</html>
+    <!-- Logo & Title -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-24 md:w-32 mb-
