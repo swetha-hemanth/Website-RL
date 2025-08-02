@@ -4,107 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html {
       scroll-behavior: smooth;
     }
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-    }
-    .overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-    }
-    .overlay-text h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      font-family: 'Playfair Display', serif;
-    }
-    .btn-yellow {
-      background-color: #facc15;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 9999px;
-      font-weight: bold;
-    }
-    .btn-green {
-      background-color: #22c55e;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 9999px;
-      font-weight: bold;
-    }
-    .logo {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      width: 120px;
-    }
-    .navbar {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 1rem;
-      font-weight: 600;
-    }
-    .navbar a {
-      color: #fff;
-      text-decoration: none;
-    }
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-    video.bg-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
   </style>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
 
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
-    Your browser does not support HTML5 video.
-  </video>
+  <!-- ✅ Navbar -->
+  <nav class="fixed top-0 w-full bg-black bg-opacity-70 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-3">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-2">
+        <img src="logo.png" alt="Logo" class="w-8 h-8" />
+        <span class="text-white text-lg font-bold">🛎️ Raja Lodge</span>
+      </div>
 
-  <!-- Logo -->
-  <img src="logo.png" alt="Raja Lodge Logo" class="logo" />
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <a href="#home">🏠 Home</a>
-    <a href="#about">📖 About</a>
-    <a href="#gallery">🖼️ Gallery</a>
-    <a href="#pricing">💰 Pricing</a>
-    <a href="#booking">📝 Booking</a>
-    <a href="#reviews">⭐ Reviews</a>
-    <a href="#guidelines">📋 Guidelines</a>
-    <a href="#contact">📞 Contact</a>
+      <!-- Nav Links -->
+      <ul class="flex flex-wrap justify-center gap-3 mt-2 sm:mt-0 text-sm sm:text-base text-white font-medium">
+        <li><a href="#home" class="hover:text-yellow-400">🏠 Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400">📖 About</a></li>
+        <li><a href="#gallery" class="hover:text-yellow-400">🖼️ Gallery</a></li>
+        <li><a href="#pricing" class="hover:text-yellow-400">💰 Pricing</a></li>
+        <li><a href="#booking" class="hover:text-yellow-400">📅 Booking</a></li>
+        <li><a href="#reviews" class="hover:text-yellow-400">🌟 Reviews</a></li>
+        <li><a href="#guidelines" class="hover:text-yellow-400">📜 Guidelines</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">📞 Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="relative h-screen w-full flex items-center justify-center">
-    <div class="overlay-text">
-      <h1 class="text-4xl md:text-6xl mb-6">Welcome to Raja Lodge Ooty</h1>
-      <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="tel:09843830181" class="btn-yellow">📞 Call Now</a>
-        <a href="https://wa.me/919843830181" target="_blank" class="btn-green">💬 WhatsApp Now</a>
+  <!-- ✅ Home Section -->
+  <section id="home" class="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="z-10 text-center px-6">
+      <img src="logo.png" alt="Logo" class="mx-auto mb-6 w-20 h-20" />
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white drop-shadow-lg">Raja Lodge Ooty</h1>
+      <p class="mt-4 text-lg sm:text-xl text-white">Your home away from home in the Queen of Hills</p>
+      <div class="mt-6 flex justify-center gap-4 flex-wrap">
+        <a href="tel:09843830181" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 px-5 rounded-full transition">📞 Call Now</a>
+        <a href="https://wa.me/919843830181" class="bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-5 rounded-full transition">💬 WhatsApp Now</a>
       </div>
     </div>
   </section>
 
+  <!-- ✅ About Section -->
+  <section id="about" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your ABOUT content here -->
+  </section>
+
+  <!-- ✅ Gallery Section -->
+  <section id="gallery" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your GALLERY content here -->
+  </section>
+
+  <!-- ✅ Pricing Section -->
+  <section id="pricing" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your PRICING content here -->
+  </section>
+
+  <!-- ✅ Booking Section -->
+  <section id="booking" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your BOOKING content here -->
+  </section>
+
+  <!-- ✅ Reviews Section -->
+  <section id="reviews" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your REVIEWS content here -->
+  </section>
+
+  <!-- ✅ Guidelines Section -->
+  <section id="guidelines" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your GUIDELINES content here -->
+  </section>
+
+  <!-- ✅ Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-black bg-opacity-90">
+    <!-- 🔻 Paste your CONTACT content here -->
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="text-center py-6 text-sm bg-black bg-opacity-80">
+    © 2025 Raja Lodge Ooty. All rights reserved.
+  </footer>
 </body>
 </html>
