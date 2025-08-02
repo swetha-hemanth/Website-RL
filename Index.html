@@ -1,199 +1,167 @@
-      <!DOCTYPE html>
+          <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Raja Lodge - Home</title>
   <style>
     * {
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
       box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      color: #fff;
-      background-color: #111;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f1f1f1;
+      background: #000;
+    }
+
+    /* Video Background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.4);
     }
 
     nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
       position: sticky;
       top: 0;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
       z-index: 10;
     }
 
     nav a {
-      color: #fff;
-      margin-left: 20px;
+      color: white;
       text-decoration: none;
+      margin: 0 20px;
       font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
     }
 
-    section {
-      padding: 80px 20px;
+    nav a:hover {
+      color: #00e6e6;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 25px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+    }
+
+    h1 {
+      color: #00e6e6;
       text-align: center;
-    }
-
-    /* Home with background video */
-    #home {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    #home video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(0.6);
-    }
-
-    #home h1 {
-      position: relative;
-      font-size: 3rem;
-      top: 40%;
-      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 5px black;
     }
 
     h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
+      color: #ffcc00;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      text-shadow: 1px 1px 3px black;
     }
 
-    p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
+    ul {
+      padding-left: 25px;
+      line-height: 1.8;
     }
 
-    .gallery img {
-      width: 300px;
-      margin: 10px;
-      border-radius: 10px;
-      transition: transform 0.3s;
+    li {
+      margin-bottom: 8px;
     }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .pricing-box {
-      background: #222;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 400px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-    }
-
-    .contact-box {
-      background: #222;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .contact-box a {
-      color: #00ff99;
-      text-decoration: none;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #000;
-      text-align: center;
+    .highlight {
+      background-color: rgba(255, 255, 255, 0.08);
       padding: 15px;
-      font-size: 14px;
+      margin-top: 30px;
+      border-left: 5px solid #00e6e6;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Background Video Only on Homepage -->
+  <video autoplay muted loop playsinline class="video-bg">
+    <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <nav>
-    <div><strong>Raja Lodge Ooty</strong></div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <a href="index.html">🏠 Home</a>
+    <a href="pricing.html">💰 Pricing</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="reviews.html">⭐ Reviews</a>
+    <a href="contact.html">📞 Contact</a>
   </nav>
 
-  <section id="home">
-    <video autoplay muted loop>
-      <source src="https://share.google/c953eA85uG4DYbah6" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <h1>Welcome to Raja Lodge, Ooty</h1>
-  </section>
+  <div class="container">
+    <h1>Room Pricing</h1>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>With over 45 years of warm hospitality, Raja Lodge has been a trusted name in Ooty. Nestled near the heart of the town, we offer comfort, convenience, and a true taste of local heritage for families, couples, and solo travelers alike.</p>
-  </section>
+    <h2>Weekday Rates</h2>
+    <ul>
+      <li>Single Person: ₹600</li>
+      <li>Standard Room (2 persons): ₹700</li>
+      <li>Deluxe Room (2 persons): ₹900</li>
+      <li>Triple Bedroom (4 persons): ₹1000</li>
+    </ul>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://i.ibb.co/r6J1S0F/room1.jpg" alt="Room 1">
-      <img src="https://i.ibb.co/Vx0L4QD/room2.jpg" alt="Room 2">
-      <img src="https://i.ibb.co/NnDxK0g/ooty-view.jpg" alt="View">
+    <h2>Weekend Rates</h2>
+    <ul>
+      <li>Single Person: ₹700</li>
+      <li>Standard Room (2 persons): ₹900</li>
+      <li>Deluxe Room (2 persons): ₹1200</li>
+      <li>Triple Bedroom (4 persons): ₹1400</li>
+    </ul>
+
+    <h2>Seasonal Pricing (Apr 1 – Jun 10)</h2>
+    <ul>
+      <li>Standard Room (1 person): ₹1000</li>
+      <li>Standard Room (2 persons): ₹1200</li>
+      <li>Deluxe Room (2 persons): ₹1500</li>
+      <li>Triple Bedroom (4 persons): ₹1800</li>
+    </ul>
+
+    <h2>Peak Weekends / Holidays</h2>
+    <ul>
+      <li>Standard Room (1 person): ₹1500</li>
+      <li>Deluxe Room (2 persons): ₹2300</li>
+      <li>Triple Bedroom (4 persons): ₹2500</li>
+    </ul>
+
+    <div class="highlight">
+      🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
+      Vehicle: Swaraj Mazda Van
     </div>
-  </section>
-
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <div class="pricing-box">
-      <p><strong>Single Room:</strong> ₹1000 / night</p>
-      <p><strong>Double Room:</strong> ₹1800 / night</p>
-      <p><strong>Family Room:</strong> ₹2500 / night</p>
-      <p><em>*Prices may vary on weekends and holidays</em></p>
-    </div>
-  </section>
-
-  <section id="reviews">
-    <h2>Reviews</h2>
-    <p>⭐️⭐️⭐️⭐️⭐️<br/>“Amazing stay and great service. Just 2 minutes walk from the bus stand!”</p>
-    <p>⭐️⭐️⭐️⭐️<br/>“Comfortable rooms and friendly staff. Highly recommended!”</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-box">
-      <p><strong>Phone:</strong> <a href="tel:+919843830181">98438 30181</a>, <a href="tel:+919843676822">98436 76822</a></p>
-      <p><strong>Email:</strong> <a href="mailto:rajalodge1980@gmail.com">rajalodge1980@gmail.com</a></p>
-      <p><strong>Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001</p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/9843830181" target="_blank">Message on WhatsApp</a></p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.2527454458536!2d76.727754!3d11.411879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd00db6a3b45%3A0x8b1b3f598497729!2sRaja%20Lodge%2C%20Ooty!5e0!3m2!1sen!2sin!4v1721652000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Raja Lodge, Ooty. All Rights Reserved.
-  </footer>
+  </div>
 
 </body>
 </html>
