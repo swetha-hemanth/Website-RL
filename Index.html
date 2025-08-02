@@ -1,142 +1,63 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    .custom-font {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .logo-img {
-      width: 80px;
-      height: auto;
-    }
-
-    .hero-section {
-      height: 100vh;
-      position: relative;
-    }
-
-    video {
-      object-fit: cover;
-    }
-
-    @media (max-width: 640px) {
-      .logo-img {
-        width: 60px;
-      }
-
-      .hero-title {
-        font-size: 1.6rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem;
-      }
+      font-family: 'Georgia', serif;
     }
   </style>
 </head>
 <body class="bg-black text-white">
 
-  <!-- Navbar -->
-
-      <nav class="mt-2 md:mt-0 flex flex-wrap justify-center gap-4 text-sm sm:text-base">
-        <a href="#home" class="hover:text-yellow-400">🏠 Home</a>
-        <a href="#about" class="hover:text-yellow-400">ℹ️ About</a>
-        <a href="#gallery" class="hover:text-yellow-400">🖼️ Gallery</a>
-        <a href="#pricing" class="hover:text-yellow-400">💰 Pricing</a>
-        <a href="#booking" class="hover:text-yellow-400">📅 Booking</a>
-        <a href="#reviews" class="hover:text-yellow-400">⭐ Reviews</a>
-        <a href="#contact" class="hover:text-yellow-400">📞 Contact</a>
-      </nav>
-    </div>
-  </header>
-
   <!-- Home Section -->
-  <section id="home" class="hero-section">
-    <video autoplay muted loop class="absolute w-full h-full object-cover z-[-1]">
-      <source src="InShot_20250802_192625151 (1).mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+  <section class="relative h-screen w-full overflow-hidden">
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
     </video>
-    <div class="overlay flex flex-col justify-center items-center text-center h-full px-4">
-    <div class="relative z-10 flex flex-col justify-center items-center text-center h-full pt-3" style="font-family: 'Playfair Display', serif;">
-  <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 h-32 object-cover rounded-full border-4 border-white shadow-xl mb-4" />
-  
-  <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 leading-tight">Welcome to Raja Lodge</h1>
-  
-  <p class="mt-2 text-lg text-white italic">Your cozy stay in the Queen of Hills, Ooty 🌄</p>
-  
-  <p class="mt-4 text-base md:text-lg text-gray-200 max-w-2xl px-4">
-    Experience warmth, comfort, and tradition — all nestled in the heart of Ooty. 🌿  
-    Whether you're here for a peaceful getaway or an adventure in the hills, we promise you a stay that feels like home. 🛏️✨
-  </p>
-  
-  <div class="mt-6 flex space-x-4">
-    <a href="tel:09843830181" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-xl shadow transition">📞 Call Now</a>
-    <a href="https://wa.me/919843830181" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-xl shadow transition">💬 WhatsApp</a>
-  </div>
+
+    <!-- Overlay content -->
+    <div class="relative z-10 flex flex-col justify-center items-center text-center h-full pt-20">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 h-32 object-cover rounded-full border-4 border-white shadow-xl mb-4" />
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white title-font leading-tight tracking-wide">Welcome to Raja Lodge</h1>
+      <p class="mt-2 text-lg text-gray-200 italic">Your cozy stay in the Queen of Hills, Ooty 🌄</p>
+      <div class="mt-6 flex space-x-4">
+        <a href="tel:09843830181" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-xl shadow transition">📞 Call Now</a>
+        <a href="https://wa.me/919843830181" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-xl shadow transition">💬 WhatsApp</a>
+      </div>
     </div>
   </section>
 
-  <!-- Placeholder Sections for Scrolling -->
-  <section id="about" class="h-screen bg-black text-white flex items-center justify-center">
-    <h2 class="text-3xl">About Section</h2>
-  </section><!-- About Section -->
-<section id="about" class="relative h-screen flex items-center justify-center text-white">
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img src="image-1.png" alt="Raja Lodge Ooty" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-black bg-opacity-70"></div> <!-- Darker overlay for readability -->
-  </div>
+  <!-- About Section -->
+  <section id="about" class="relative py-24 px-6">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img src="image-1.png" alt="Raja Lodge Ooty" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-4xl px-6 text-center">
-    <!-- Title -->
-    <h2 class="text-4xl md:text-5xl font-serif font-extrabold text-yellow-300 mb-6 tracking-wide drop-shadow-lg"
-        style="font-family: 'Playfair Display', serif;">
-      Discover the Charm of Raja Lodge
-    </h2>
-
-    <!-- Paragraph -->
-    <p class="text-lg md:text-xl leading-relaxed text-gray-200 backdrop-blur-md bg-black bg-opacity-30 p-4 rounded-xl shadow-xl"
-       style="font-family: 'Merriweather', serif;">
-      Nestled in the serene hills of <span class="text-yellow-200 font-semibold">Ooty</span>, <strong class="text-yellow-300">Raja Lodge</strong> has been a symbol of comfort and trust for over <strong class="text-yellow-300">20 years</strong>. Just <strong>100 meters</strong> from both the <span class="text-yellow-200">bus stand</span> and <span class="text-yellow-200">railway station</span>, our lodge offers easy access and heartfelt hospitality. Whether you're a nature lover, a couple seeking peace, or a family on a getaway — your cozy stay begins here. 🌿🏡
-    </p>
-  </div>
-</section>
-
-  <section id="gallery" class="h-screen bg-gray-900 text-white flex items-center justify-center">
-    <h2 class="text-3xl">Gallery Section</h2>
+    <!-- Animated Content -->
+    <div class="relative z-10 text-center max-w-3xl mx-auto" data-aos="fade-up">
+      <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-wide font-serif">About Raja Lodge</h2>
+      <p class="text-lg md:text-xl leading-relaxed text-gray-100 font-light">
+        Nestled in the heart of the Queen of Hills – Ooty, Raja Lodge has been your trusted home away from home for over 20 years.
+        We blend heritage comfort with modern elegance, offering scenic stays just 100 meters from the main bus stand and railway station.
+        Experience warm hospitality, breathtaking views, and unforgettable memories at Raja Lodge.
+      </p>
+    </div>
   </section>
 
-  <section id="pricing" class="h-screen bg-black text-white flex items-center justify-center">
-    <h2 class="text-3xl">Pricing Section</h2>
-  </section>
-
-  <section id="booking" class="h-screen bg-gray-900 text-white flex items-center justify-center">
-    <h2 class="text-3xl">Booking Section</h2>
-  </section>
-
-  <section id="reviews" class="h-screen bg-black text-white flex items-center justify-center">
-    <h2 class="text-3xl">Reviews Section</h2>
-  </section>
-
-  <section id="contact" class="h-screen bg-gray-900 text-white flex items-center justify-center">
-    <h2 class="text-3xl">Contact Section</h2>
-  </section>
-
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
 </body>
-      </html>
+</html>
