@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raja Lodge Ooty</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raja Lodge Ooty</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <!-- Navbar -->
-    <header class="sticky top-0 bg-white shadow">
-        <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold">Raja Lodge Ooty</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="hover:text-green-600">Home</a></li>
-                <li><a href="#about" class="hover:text-green-600">About</a></li>
-                <li><a href="#gallery" class="hover:text-green-600">Gallery</a></li>
-                <li><a href="#pricing" class="hover:text-green-600">Pricing</a></li>
-                <li><a href="#booking" class="hover:text-green-600">Booking</a></li>
-                <li><a href="#reviews" class="hover:text-green-600">Reviews</a></li>
-                <li><a href="#guidelines" class="hover:text-green-600">Guidelines</a></li>
-                <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white shadow z-20">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Raja Lodge Ooty</h1>
+      <ul class="flex space-x-4 text-sm md:text-base">
+        <li><a href="#home" class="hover:text-green-600">Home</a></li>
+        <li><a href="#about" class="hover:text-green-600">About</a></li>
+        <li><a href="#gallery" class="hover:text-green-600">Gallery</a></li>
+        <li><a href="#pricing" class="hover:text-green-600">Pricing</a></li>
+        <li><a href="#booking" class="hover:text-green-600">Booking</a></li>
+        <li><a href="#reviews" class="hover:text-green-600">Reviews</a></li>
+        <li><a href="#guidelines" class="hover:text-green-600">Guidelines</a></li>
+        <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Content Sections will go here -->
+  <!-- Hero Section with Background Video and Logo -->
+  <section id="home" class="relative h-screen w-full overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="videos/new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-    <script src="script.js"></script>
+    <!-- Overlay Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full bg-black bg-opacity-50 text-white text-center px-4">
+      <!-- Logo -->
+      <img src="images/IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 md:w-48 mb-6 rounded-full shadow-xl border-4 border-white" />
+
+      <!-- Text -->
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Raja Lodge Ooty</h1>
+      <p class="text-lg md:text-2xl mb-6">Your home away from home in the Queen of Hills</p>
+      <a href="#booking" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg transition-all">Book Now</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
