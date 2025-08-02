@@ -7,22 +7,37 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white font-sans">
+
+  <!-- Fixed Top Navigation (2 lines) -->
+  <nav class="absolute top-0 left-0 w-full z-50 px-4 py-3 bg-black bg-opacity-60 backdrop-blur-sm">
+    <ul class="grid grid-cols-4 sm:grid-cols-8 text-xs sm:text-sm font-semibold text-white gap-y-2 gap-x-4 justify-items-center">
+      <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+      <li><a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a></li>
+      <li><a href="#pricing" class="hover:text-yellow-400 transition">Pricing</a></li>
+      <li><a href="#booking" class="hover:text-yellow-400 transition">Booking</a></li>
+      <li><a href="#reviews" class="hover:text-yellow-400 transition">Reviews</a></li>
+      <li><a href="#guidelines" class="hover:text-yellow-400 transition">Guidelines</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400 transition">Contact Us</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero Section with Fullscreen Video -->
-  <div class="relative w-full h-screen overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden" id="home">
     <video autoplay muted loop class="absolute w-full h-full object-cover">
       <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
     </video>
 
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-4 text-center">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center px-4 text-center pt-20">
       <!-- Logo -->
-      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-28 h-28 mb-4 rounded-full border-4 border-white shadow-xl" />
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-24 h-24 sm:w-28 sm:h-28 mb-4 rounded-full border-4 border-white shadow-xl" />
 
       <!-- Lodge Name -->
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-gold-400 tracking-wide mb-2">RAJA LODGE OOTY</h1>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-yellow-400 tracking-wide mb-2">RAJA LODGE OOTY</h1>
 
       <!-- Subtext -->
-      <p class="text-lg sm:text-xl font-medium font-serif text-gray-200 mb-6">
+      <p class="text-lg sm:text-xl font-serif text-gray-200 mb-6">
         Your Home Away from Home in the Queen of Hills
       </p>
 
@@ -34,18 +49,5 @@
     </div>
   </div>
 
-  <!-- Navigation Bar (2-line style) -->
-  <nav class="bg-black py-4 shadow-md border-t border-yellow-500">
-    <ul class="grid grid-cols-2 gap-x-6 gap-y-3 justify-items-center text-sm sm:text-base font-semibold tracking-wide">
-      <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
-      <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
-      <li><a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a></li>
-      <li><a href="#pricing" class="hover:text-yellow-400 transition">Pricing</a></li>
-      <li><a href="#booking" class="hover:text-yellow-400 transition">Booking</a></li>
-      <li><a href="#reviews" class="hover:text-yellow-400 transition">Reviews</a></li>
-      <li><a href="#guidelines" class="hover:text-yellow-400 transition">Guidelines</a></li>
-      <li><a href="#contact" class="hover:text-yellow-400 transition">Contact Us</a></li>
-    </ul>
-  </nav>
 </body>
 </html>
