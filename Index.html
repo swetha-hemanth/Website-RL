@@ -1,91 +1,521 @@
-            
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raja Lodge Ooty</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Playfair Display', serif;
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: #121212;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
     }
     header video {
-      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
+      object-fit: cover;
       z-index: -1;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      background: #121212;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #E8C547;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      color: #aaa;
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white">  <!-- Home Section -->  <header class="relative h-screen w-full overflow-hidden">
-    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
-      <source src="new_view_nilgiris_556167a4678646f394d5b429d98a13a1.mp4" type="video/mp4">
-    </video>
-    <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex flex-col justify-center items-center text-center p-4">
-      <img src="https://i.ibb.co/GvPyYMyD/IMG-20250731-WA0005.jpg" alt="Logo" class="w-32 mb-4">
-      <h1 class="text-4xl font-bold text-white drop-shadow-lg">Welcome to Raja Lodge, Ooty</h1>
-      <p class="text-lg mt-2">Your home away from home in the Queen of Hills 🏞️</p>
-    </div>
-  </header>  <!-- Navbar -->  <nav class="sticky top-0 z-50 bg-gray-800 text-white shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-4 py-3">
-      <span class="font-semibold text-xl">Raja Lodge</span>
-      <ul class="flex gap-4 text-sm md:text-base">
-        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-        <li><a href="#gallery" class="hover:text-yellow-400">Gallery</a></li>
-        <li><a href="#pricing" class="hover:text-yellow-400">Pricing</a></li>
-        <li><a href="#booking" class="hover:text-yellow-400">Booking</a></li>
-        <li><a href="#reviews" class="hover:text-yellow-400">Reviews</a></li>
-        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
-      </ul>
-    </div>
-  </nav>  <!-- About Section -->  <section id="about" class="bg-gray-900 py-10 px-4 md:px-16">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-4">About Us</h2>
-    <p class="text-white leading-loose max-w-3xl">Raja Lodge has proudly served travelers in Ooty for over 20 years. We offer comfortable and budget-friendly rooms just 100 meters from the Ooty Bus Stand and Railway Station. Enjoy serene views, cozy accommodations, and genuine hospitality in the heart of the Nilgiris.</p>
-  </section>  <!-- Gallery Section -->  <section id="gallery" class="bg-gray-950 py-10 px-4 md:px-16">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-6">Gallery</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <img src="https://i.ibb.co/k2mTTWD7/IMG-20250731-WA0014.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/PZ87YkMq/IMG-20250731-WA0015.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/tPZYcQVF/IMG-20250731-WA0016.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/zhcLJGh9/IMG-20250731-WA0019.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/7J22kGz0/IMG-20250731-WA0021.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/4wLh6XRT/IMG-20250731-WA0017.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/N6v5kppp/IMG-20250731-WA0024.jpg" class="rounded-lg shadow-md">
-      <img src="https://i.ibb.co/pB9FWYX7/IMG-20250731-WA0022.jpg" class="rounded-lg shadow-md">
-    </div>
-  </section>  <!-- Pricing Section -->  <section id="pricing" class="bg-gray-900 py-10 px-4 md:px-16">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-6">Pricing</h2>
-    <ul class="space-y-4">
-      <li>🛏️ Standard Room: ₹999/night</li>
-      <li>🛁 Deluxe Room: ₹1,299/night</li>
-      <li>👨‍👩‍👧‍👦 Family Room: ₹1,799/night</li>
+<body><header>
+  <video src="InShot_20250802_135353047 (1).mp4" autoplay loop muted></video>
+  <nav>
+    <img src="https://i.ibb.co/GvPyYMyD/IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#review">Reviews</a></li>
+      <li><a href="#guidelines">Guidelines</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <p class="text-sm mt-2 text-gray-300">* Prices may vary on weekends and holidays</p>
-  </section>  <!-- Booking Section -->  <section id="booking" class="bg-gray-950 py-10 px-4 md:px-16">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Booking</h2>
-    <form class="grid grid-cols-1 gap-4 max-w-xl">
-      <input type="text" placeholder="Full Name" class="p-2 rounded bg-gray-800 text-white">
-      <input type="date" placeholder="Check-in Date" class="p-2 rounded bg-gray-800 text-white">
-      <input type="date" placeholder="Check-out Date" class="p-2 rounded bg-gray-800 text-white">
-      <input type="number" placeholder="Guests" class="p-2 rounded bg-gray-800 text-white">
-      <button type="submit" class="bg-yellow-400 text-black p-2 rounded font-semibold hover:bg-yellow-300">Book Now</button>
-    </form>
-  </section>  <!-- Reviews Section -->  <section id="reviews" class="bg-gray-900 py-10 px-4 md:px-16">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-6">Reviews</h2>
-    <div class="space-y-4">
-      <div class="bg-gray-800 p-4 rounded shadow">"Perfect location! Just a short walk from the station. Loved the staff and cleanliness." – Priya M.</div>
-      <div class="bg-gray-800 p-4 rounded shadow">"Affordable and peaceful. Our go-to place every time we visit Ooty." – Karthik R.</div>
+  </nav>
+  <section id="home" style="text-align: center; padding-top: 20vh; color: #fff;">
+    <h1>Welcome to Raja Lodge Ooty</h1>
+    <p>Your cozy stay just 5 minutes from bus stand & railway station</p>
+  </section>
+</header><section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p>With over 20 years of service, Raja Lodge Ooty offers a serene and homely environment for travelers. Perfectly located near major transport hubs and local attractions.</p>
+</section><section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery">
+    <img src="https://i.ibb.co/k2mTTWD7/IMG-20250731-WA0014.jpg">
+    <img src="https://i.ibb.co/PZ87YkMq/IMG-20250731-WA0015.jpg">
+    <img src="https://i.ibb.co/tPZYcQVF/IMG-20250731-WA0016.jpg">
+    <img src="https://i.ibb.co/zhcLJGh9/IMG-20250731-WA0019.jpg">
+    <img src="https://i.ibb.co/7J22kGz0/IMG-20250731-WA0021.jpg">
+    <img src="https://i.ibb.co/4wLh6XRT/IMG-20250731-WA0017.jpg">
+    <img src="https://i.ibb.co/N6v5kppp/IMG-20250731-WA0024.jpg">
+    <img src="https://i.ibb.co/pB9FWYX7/IMG-20250731-WA0022.jpg">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raja Lodge - Pricing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f1f1f1;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00e6e6;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 25px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+    }
+
+    h1 {
+      color: #00e6e6;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 5px black;
+    }
+
+    h2 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+      margin-top: 30px;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    ul {
+      padding-left: 25px;
+      line-height: 1.8;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      margin-top: 30px;
+      border-left: 5px solid #00e6e6;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="pricing.html">💰 Pricing</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="reviews.html">⭐ Reviews</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Room Pricing</h1>
+
+    <h2>Weekday Rates</h2>
+    <ul>
+      <li>Single Person: ₹600</li>
+      <li>Standard Room (2 persons): ₹700</li>
+      <li>Deluxe Room (2 persons): ₹900</li>
+      <li>Triple Bedroom (4 persons): ₹1000</li>
+    </ul>
+
+    <h2>Weekend Rates</h2>
+    <ul>
+      <li>Single Person: ₹700</li>
+      <li>Standard Room (2 persons): ₹900</li>
+      <li>Deluxe Room (2 persons): ₹1200</li>
+      <li>Triple Bedroom (4 persons): ₹1400</li>
+    </ul>
+
+    <h2>Seasonal Pricing (Apr 1 – Jun 10)</h2>
+    <ul>
+      <li>Standard Room (1 person): ₹1000</li>
+      <li>Standard Room (2 persons): ₹1200</li>
+      <li>Deluxe Room (2 persons): ₹1500</li>
+      <li>Triple Bedroom (4 persons): ₹1800</li>
+    </ul>
+
+    <h2>Peak Weekends / Holidays</h2>
+    <ul>
+      <li>Standard Room (1 person): ₹1500</li>
+      <li>Deluxe Room (2 persons): ₹2300</li>
+      <li>Triple Bedroom (4 persons): ₹2500</li>
+    </ul>
+
+    <div class="highlight">
+      🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
+      Vehicle: Swaraj Mazda Van
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" class="bg-gray-950 py-10 px-4 md:px-16">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Contact Us</h2>
-    <p class="mb-2">📍 Near Bus Stand, Ooty, Tamil Nadu</p>
-    <p class="mb-2">📞 <a href="tel:+919384989077" class="text-yellow-400">+91 93849 89077</a></p>
-    <p class="mb-2">📧 <a href="mailto:Manju9041mp@gmail.com" class="text-yellow-400">Manju9041mp@gmail.com</a></p>
-    <a href="https://wa.me/9487840509" target="_blank" class="inline-block mt-4 bg-green-500 text-white px-4 py-2 rounded">📱 WhatsApp Us</a>
-  </section>  <!-- Footer -->  <footer class="bg-black text-center py-4 text-sm text-gray-400">
-    &copy; 2025 Raja Lodge Ooty. All rights reserved.
-  </footer></body>
+  </div>
+
+</body>
+</html>>
+</section><section id="booking">
+  <h2 class="section-title">Booking</h2>
+  <p>WhatsApp us at <strong><a href="https://wa.me/919384989077" style="color: #E8C547">+91 93849 89077</a></strong> to reserve your room today!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raja Lodge - Reviews</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .star-rating input {
+      display: none;
+    }
+
+    .star-rating label {
+      font-size: 30px;
+      color: gray;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: gold;
+    }
+
+    button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1cae5e;
+    }
+
+    .review-section {
+      max-width: 700px;
+      margin: 40px auto;
+    }
+
+    .review-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .review-card {
+      background-color: #fff;
+      color: #000;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .review-card strong {
+      font-size: 18px;
+    }
+
+    .review-card p {
+      margin: 5px 0 0;
+    }
+
+    a.home-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Share Your Experience at Raja Lodge</h1>
+
+  <!-- Review Form -->
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
+
+    <label>Your Rating:</label>
+    <div class="star-rating">
+      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+    </div>
+
+    <label for="comment">Your Review:</label>
+    <textarea id="comment" rows="5" placeholder="Write your review here..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <!-- Sample People Reviews -->
+  <div class="review-section">
+    <h2>What Our Guests Say</h2>
+
+    <div class="review-card">
+      <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
+      <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
+      <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
+      <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
+    </div>
+  </div>
+
+  <!-- Go back to Home -->
+  <a class="home-link" href="index.html">← Back to Home</a>
+
+</body>
 </html>
+</section><section id="guidelines">
+  <h2 class="section-title">Guidelines</h2>
+  <ul>
+    <li>Check-in: 12:00 PM</li>
+    <li>Check-out: 11:00 AM</li>
+    <li>No smoking inside rooms</li>
+    <li>Pets not allowed</li>
+  </ul>
+</section><section id="contact">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Raja Lodge Ooty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      background-image: url('67e47f889e-7mlrs5cjblqv1l3ar6hhr01qy15ddj5hk2 (1).png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #ffffff;
+    }
+
+    .contact-box {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 24px;
+      border-bottom: 2px solid #aaa;
+      padding-bottom: 10px;
+    }
+
+    .contact-box p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .contact-box a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Contact Raja Lodge Ooty</h2>
+  </header>
+
+  <div class="contact-box">
+    <h3>Get in Touch</h3>
+    <p><strong>Phone:</strong> <a href="tel:+919843830181">98438 30181</a>, <a href="tel:+919843676822">98436 76822</a></p>
+    <p><strong>Email:</strong> <a href="mailto:rajalodge1980@gmail.com">rajalodge1980@gmail.com</a></p>
+    <p><strong>Address:</strong> 5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/9843830181" target="_blank">Message on WhatsApp</a></p>
+
+    <!-- Google Map Embed -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.2527454458536!2d76.727754!3d11.411879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd00db6a3b45%3A0x8b1b3f598497729!2sRaja%20Lodge%2C%20Ooty!5e0!3m2!1sen!2sin!4v1721652000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+</body>
+</html>
+</section><footer>
+  <p>&copy; 2025 Raja Lodge Ooty. All rights reserved.</p>
+</footer></body>
+</html>            
