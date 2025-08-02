@@ -4,127 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f2027;
-      color: #fff;
+      padding: 0;
+      box-sizing: border-box;
       scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: #f5f5f5;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 15px;
+      gap: 30px;
+      padding: 15px 0;
       z-index: 1000;
-      backdrop-filter: blur(10px);
     }
 
     nav a {
-      color: gold;
+      color: #ffd700;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
-      color: #00ffe0;
+      color: #ffffff;
     }
 
     .hero {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 60px 20px 20px;
     }
 
-    .logo {
-      max-width: 150px;
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+
+    .hero .logo {
+      width: 130px;
+      height: auto;
       margin-bottom: 20px;
-    }
-
-    video {
-      width: 90%;
-      max-width: 900px;
-      border-radius: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
+      font-size: 40px;
+      color: #ffd700;
       margin-bottom: 10px;
-      color: gold;
     }
 
     .hero p {
       font-size: 18px;
-      color: #ccc;
-      margin-bottom: 40px;
-      max-width: 700px;
+      color: #f1f1f1;
+      max-width: 90%;
     }
 
     section {
-      padding: 80px 20px;
+      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      text-align: center;
     }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+    section h2 {
+      font-size: 30px;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
 
+    section p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    @media screen and (max-width: 768px) {
       .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
       }
 
-      .hero p {
-        font-size: 16px;
-      }
-
-      video {
-        width: 100%;
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#gallery">Gallery</a>
     <a href="#pricing">Pricing</a>
     <a href="#booking">Booking</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#guidelines">Guidelines</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero" id="home">
-    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="logo">
-    <video autoplay muted loop>
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
-      Your browser does not support the video tag.
+    <video autoplay muted loop playsinline>
+      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
     </video>
-    <h1>Welcome to Raja Lodge Ooty</h1>
-    <p>Your perfect stay just 5 minutes from Ooty Bus Stand & Railway Station. Experience comfort, hospitality, and the charm of the Queen of Hills 🌄</p>
+    <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="logo" />
+    <h1>Raja Lodge Ooty</h1>
+    <p>🏞️ Your trusted stay near Ooty Bus Stand & Railway Station – Over 20 years of hospitality excellence!</p>
   </section>
 
+  <!-- Sample Scroll Section -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Raja Lodge has been a trusted choice for travelers in Ooty for over 20 years. We offer cozy rooms, affordable pricing, and personalized service that feels like home.</p>
+    <p>We are a family-run lodge located in the heart of Ooty, just 100 meters from both the bus stand and railway station. Enjoy a cozy and convenient stay with us!</p>
   </section>
-
-  <!-- Add Gallery, Pricing, Booking, Contact, etc. sections similarly -->
 
 </body>
 </html>
