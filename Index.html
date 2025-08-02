@@ -1,77 +1,190 @@
-            <!DOCTYPE html>
+              <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raja Lodge Ooty</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
+      margin: 0;
+      padding: 0;
       scroll-behavior: smooth;
     }
 
-    .custom-font {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav .top-line {
+      font-size: 18px;
+    }
+
+    nav .bottom-line {
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: gold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    section {
+      padding: 80px 20px;
+      min-height: 100vh;
+    }
+
+    #home {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #home video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    #logo {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+      border-radius: 20px;
+    }
+
+    #title {
       font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
-    .body-font {
-      font-family: 'Poppins', sans-serif;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
     }
 
-    @media (max-width: 640px) {
-      .nav-text-sm {
-        font-size: 12px;
-      }
+    .call-btn, .whatsapp-btn {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .call-btn {
+      background-color: yellow;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+
+    /* Section styling */
+    .section {
+      background: #1a1a1a;
+      margin: 20px 0;
+      border-radius: 12px;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 20px;
+    }
+
+    img.about-img {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+      margin: 20px auto;
+      border-radius: 12px;
     }
   </style>
 </head>
-<body class="bg-black text-white body-font relative">
 
-  <!-- 🎥 Video Background -->
-  <div class="relative w-full h-screen overflow-hidden" id="home">
-    <video autoplay muted loop class="absolute w-full h-full object-cover z-[-1]">
-      <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4" />
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="top-line">✨ Welcome to Raja Lodge Ooty ✨</div>
+    <div class="bottom-line">
+      <a href="#home">🏠 Home</a>
+      <a href="#about">📖 About</a>
+      <a href="#gallery">🖼️ Gallery</a>
+      <a href="#pricing">💰 Pricing</a>
+      <a href="#booking">📝 Booking</a>
+      <a href="#reviews">🌟 Reviews</a>
+      <a href="#guidelines">📌 Guidelines</a>
+      <a href="#contact">📞 Contact</a>
+    </div>
+  </nav>
+
+  <!-- Home Section with Video -->
+  <section id="home">
+    <video autoplay muted loop playsinline>
+      <source src="videos/InShot_20250802_135353047 (1).mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
-    <!-- ✨ Navbar -->
-    <nav class="w-full px-4 py-3 flex flex-wrap justify-center gap-4 text-white font-semibold backdrop-blur-md bg-black/40 z-10 fixed top-0">
-      <a href="#home" class="hover:text-yellow-400 text-sm sm:text-base">🏠 Home</a>
-      <a href="#about" class="hover:text-yellow-400 text-sm sm:text-base">📖 About</a>
-      <a href="#gallery" class="hover:text-yellow-400 text-sm sm:text-base">🖼️ Gallery</a>
-      <a href="#pricing" class="hover:text-yellow-400 text-sm sm:text-base">💰 Pricing</a>
-      <a href="#booking" class="hover:text-yellow-400 text-sm sm:text-base">📝 Booking</a>
-      <a href="#reviews" class="hover:text-yellow-400 text-sm sm:text-base">🌟 Reviews</a>
-      <a href="#guidelines" class="hover:text-yellow-400 text-sm sm:text-base">📜 Guidelines</a>
-      <a href="#contact" class="hover:text-yellow-400 text-sm sm:text-base">📞 Contact</a>
-    </nav>
-
-    <!-- 🏨 Hero Section Content -->
-    <div class="flex flex-col items-center justify-center text-center h-full px-6 pt-24 sm:pt-32 z-10 relative">
-      <!-- 🟡 Logo -->
-      <img src="logo.png" alt="Raja Lodge Logo" class="w-24 sm:w-32 mb-4" />
-
-      <!-- 🏷️ Title -->
-      <h1 class="text-4xl sm:text-6xl font-bold custom-font text-yellow-300 drop-shadow-md">Raja Lodge Ooty</h1>
-      <p class="text-lg sm:text-xl mt-2 text-white/90">Your home away from home in the Queen of Hills</p>
-
-      <!-- 📞 Buttons -->
-      <div class="mt-6 flex gap-4">
-        <a href="tel:09843830181" class="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">Call Now</a>
-        <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-400 transition">WhatsApp Now</a>
-      </div>
+    <img id="logo" src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo">
+    <div id="title">Raja Lodge Ooty</div>
+    <div class="buttons">
+      <a class="call-btn" href="tel:9843830181">📞 Call Now</a>
+      <a class="whatsapp-btn" href="https://wa.me/919843830181" target="_blank">💬 WhatsApp Now</a>
     </div>
-  </div>
-
-  <!-- You can now add other sections like About, Gallery, etc. below this -->
-  <!-- Example: -->
-  <section id="about" class="py-16 px-6 bg-[#111]">
-    <h2 class="text-3xl font-bold custom-font text-yellow-300 mb-4 text-center">📖 About Us</h2>
-    <p class="max-w-3xl mx-auto text-center text-white/90">
-      Raja Lodge has been welcoming guests for over 20 years in the heart of Ooty. We provide cozy, clean, and affordable stays just 100 meters from the bus stand and railway station.
-    </p>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>📖 About Us</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      Welcome to Raja Lodge – your cozy and affordable stay nestled in the heart of Ooty. With over <b>45 years of experience</b>, we’ve been serving travelers with warmth, comfort, and true South Indian hospitality. Just 100 meters away from the Ooty bus stand and railway station, our location offers easy access to all major attractions. Whether you're on a family vacation, a romantic getaway, or a solo trip, Raja Lodge is your perfect base in the Queen of Hills.
+    </p>
+    <img class="about-img" src="ooty.jpg" alt="Ooty View">
+  </section>
+
+  <!-- Dummy sections for scrolling -->
+  <section id="gallery" class="section"><h2>🖼️ Gallery</h2><p style="text-align:center;">Coming soon...</p></section>
+  <section id="pricing" class="section"><h2>💰 Pricing</h2><p style="text-align:center;">Affordable pricing for everyone.</p></section>
+  <section id="booking" class="section"><h2>📝 Booking</h2><p style="text-align:center;">Book your stay with just a click.</p></section>
+  <section id="reviews" class="section"><h2>🌟 Reviews</h2><p style="text-align:center;">Our guests love us!</p></section>
+  <section id="guidelines" class="section"><h2>📌 Guidelines</h2><p style="text-align:center;">House rules & stay policies.</p></section>
+  <section id="contact" class="section"><h2>📞 Contact Us</h2><p style="text-align:center;">Phone: +91 93849 89077<br>Email: Manju9041mp@gmail.com</p></section>
+
 </body>
-</html>
+                  </html>
+                          
