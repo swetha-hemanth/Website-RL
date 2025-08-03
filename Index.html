@@ -182,44 +182,48 @@
   </div>
 </section>
 <!-- 🌟 Gallery Section End -->
-    <!-- Review Section Start -->
-<section id="reviews" style="background: url('image-5.png') center/cover no-repeat fixed; position: relative; padding: 60px 20px; font-family: 'Poppins', sans-serif; color: white;">
-  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.75); z-index:0;"></div>
-  <div style="position: relative; z-index: 1; max-width: 900px; margin: auto; animation: fadeIn 2s ease-in-out;">
-    
-    <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5em; color: #ffe600; margin-bottom: 10px;">✨ Guest Reviews</h2>
-    <p style="text-align: center; color: #ccc; margin-bottom: 30px;">Hear from those who’ve stayed at Raja Lodge</p>
+      <!-- Review Form -->
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
 
-    <!-- Google Review Button -->
-    <div style="text-align: center; margin-bottom: 40px;">
-      <a href="https://g.page/r/CeEFl_uCCTfjEB0/review" target="_blank" style="background-color: #ffe600; color: black; font-weight: bold; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-size: 18px; transition: all 0.3s ease;">
-        🌟 Write a Review on Google
-      </a>
+    <label>Your Rating:</label>
+    <div class="star-rating">
+      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
     </div>
 
-    <!-- Review Cards -->
-    <div style="display: grid; gap: 20px;">
-      <div class="review-card" style="background: rgba(255,255,255,0.9); color: #000; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.2); animation: slideUp 1s ease;">
-        <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
-        <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
-      </div>
+    <label for="comment">Your Review:</label>
+    <textarea id="comment" rows="5" placeholder="Write your review here..." required></textarea>
 
-      <div class="review-card" style="background: rgba(255,255,255,0.9); color: #000; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.2); animation: slideUp 1.2s ease;">
-        <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
-        <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
-      </div>
+    <button type="submit">Submit Review</button>
+  </form>
 
-      <div class="review-card" style="background: rgba(255,255,255,0.9); color: #000; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.2); animation: slideUp 1.4s ease;">
-        <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
-        <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
-      </div>
+  <!-- Sample People Reviews -->
+  <div class="review-section">
+    <h2>What Our Guests Say</h2>
+
+    <div class="review-card">
+      <strong>Priya S. ⭐⭐⭐⭐⭐</strong>
+      <p>“Amazing service and very clean rooms. Highly recommend staying here if you're visiting Ooty!”</p>
     </div>
 
-    <!-- Back to Home -->
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="index.html" style="color: #00ffcc; text-decoration: none; font-weight: bold;">← Back to Home</a>
+    <div class="review-card">
+      <strong>Rahul K. ⭐⭐⭐⭐☆</strong>
+      <p>“Location is perfect, near bus stand. Staff was friendly and helpful. A good budget stay.”</p>
+    </div>
+
+    <div class="review-card">
+      <strong>Anjali M. ⭐⭐⭐⭐⭐</strong>
+      <p>“Felt like home! Loved the service and hospitality. Will come again with my family.”</p>
     </div>
   </div>
+
+  <!-- Go back to Home -->
+  <a class="home-link" href="index.html">← Back to Home</a>
 
   <!-- Animations -->
   <style>
